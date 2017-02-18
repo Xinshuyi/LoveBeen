@@ -1,0 +1,477 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		22CEBE9F1E57D7C300967943 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CEBE9E1E57D7C300967943 /* main.m */; };
+		22CEBEA21E57D7C300967943 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CEBEA11E57D7C300967943 /* AppDelegate.m */; };
+		22CEBEAA1E57D7C300967943 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22CEBEA91E57D7C300967943 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		22CEBE9A1E57D7C300967943 /* LoveBeen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoveBeen.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		22CEBE9E1E57D7C300967943 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		22CEBEA01E57D7C300967943 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		22CEBEA11E57D7C300967943 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		22CEBEA91E57D7C300967943 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		22CEBEAE1E57D7C300967943 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		22CEBE971E57D7C200967943 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		22CEBE911E57D7C200967943 = {
+			isa = PBXGroup;
+			children = (
+				22CEBE9C1E57D7C300967943 /* LoveBeen */,
+				22CEBE9B1E57D7C300967943 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		22CEBE9B1E57D7C300967943 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				22CEBE9A1E57D7C300967943 /* LoveBeen.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		22CEBE9C1E57D7C300967943 /* LoveBeen */ = {
+			isa = PBXGroup;
+			children = (
+				22CEBEA01E57D7C300967943 /* AppDelegate.h */,
+				22CEBEA11E57D7C300967943 /* AppDelegate.m */,
+				22CEBEB41E57DED400967943 /* Classes */,
+				22CEBE9D1E57D7C300967943 /* Supporting Files */,
+			);
+			path = LoveBeen;
+			sourceTree = "<group>";
+		};
+		22CEBE9D1E57D7C300967943 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				22CEBEA91E57D7C300967943 /* Assets.xcassets */,
+				22CEBEAE1E57D7C300967943 /* Info.plist */,
+				22CEBE9E1E57D7C300967943 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		22CEBEB41E57DED400967943 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				22CEBEB51E57DED400967943 /* Extension */,
+				22CEBEB61E57DED400967943 /* FirstPage */,
+				22CEBEBA1E57DED400967943 /* FourthPage */,
+				22CEBEBE1E57DED400967943 /* Libs */,
+				22CEBEBF1E57DED400967943 /* MainPage */,
+				22CEBEC31E57DED400967943 /* SecondPage */,
+				22CEBEC71E57DED400967943 /* ThirdPage */,
+				22CEBECB1E57DED400967943 /* Tools */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		22CEBEB51E57DED400967943 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		22CEBEB61E57DED400967943 /* FirstPage */ = {
+			isa = PBXGroup;
+			children = (
+				22CEBEB71E57DED400967943 /* Controller */,
+				22CEBEB81E57DED400967943 /* Model */,
+				22CEBEB91E57DED400967943 /* View */,
+			);
+			path = FirstPage;
+			sourceTree = "<group>";
+		};
+		22CEBEB71E57DED400967943 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		22CEBEB81E57DED400967943 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		22CEBEB91E57DED400967943 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		22CEBEBA1E57DED400967943 /* FourthPage */ = {
+			isa = PBXGroup;
+			children = (
+				22CEBEBB1E57DED400967943 /* Controller */,
+				22CEBEBC1E57DED400967943 /* Model */,
+				22CEBEBD1E57DED400967943 /* View */,
+			);
+			path = FourthPage;
+			sourceTree = "<group>";
+		};
+		22CEBEBB1E57DED400967943 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		22CEBEBC1E57DED400967943 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		22CEBEBD1E57DED400967943 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		22CEBEBE1E57DED400967943 /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Libs;
+			sourceTree = "<group>";
+		};
+		22CEBEBF1E57DED400967943 /* MainPage */ = {
+			isa = PBXGroup;
+			children = (
+				22CEBEC01E57DED400967943 /* Controller */,
+				22CEBEC11E57DED400967943 /* Model */,
+				22CEBEC21E57DED400967943 /* View */,
+			);
+			path = MainPage;
+			sourceTree = "<group>";
+		};
+		22CEBEC01E57DED400967943 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		22CEBEC11E57DED400967943 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		22CEBEC21E57DED400967943 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		22CEBEC31E57DED400967943 /* SecondPage */ = {
+			isa = PBXGroup;
+			children = (
+				22CEBEC41E57DED400967943 /* Controller */,
+				22CEBEC51E57DED400967943 /* Model */,
+				22CEBEC61E57DED400967943 /* View */,
+			);
+			path = SecondPage;
+			sourceTree = "<group>";
+		};
+		22CEBEC41E57DED400967943 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		22CEBEC51E57DED400967943 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		22CEBEC61E57DED400967943 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		22CEBEC71E57DED400967943 /* ThirdPage */ = {
+			isa = PBXGroup;
+			children = (
+				22CEBEC81E57DED400967943 /* Controller */,
+				22CEBEC91E57DED400967943 /* Model */,
+				22CEBECA1E57DED400967943 /* View */,
+			);
+			path = ThirdPage;
+			sourceTree = "<group>";
+		};
+		22CEBEC81E57DED400967943 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		22CEBEC91E57DED400967943 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		22CEBECA1E57DED400967943 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		22CEBECB1E57DED400967943 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		22CEBE991E57D7C200967943 /* LoveBeen */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22CEBEB11E57D7C300967943 /* Build configuration list for PBXNativeTarget "LoveBeen" */;
+			buildPhases = (
+				22CEBE961E57D7C200967943 /* Sources */,
+				22CEBE971E57D7C200967943 /* Frameworks */,
+				22CEBE981E57D7C200967943 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LoveBeen;
+			productName = LoveBeen;
+			productReference = 22CEBE9A1E57D7C300967943 /* LoveBeen.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		22CEBE921E57D7C200967943 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = DogeEggEgg;
+				TargetAttributes = {
+					22CEBE991E57D7C200967943 = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 22CEBE951E57D7C200967943 /* Build configuration list for PBXProject "LoveBeen" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 22CEBE911E57D7C200967943;
+			productRefGroup = 22CEBE9B1E57D7C300967943 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				22CEBE991E57D7C200967943 /* LoveBeen */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		22CEBE981E57D7C200967943 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22CEBEAA1E57D7C300967943 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		22CEBE961E57D7C200967943 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22CEBEA21E57D7C300967943 /* AppDelegate.m in Sources */,
+				22CEBE9F1E57D7C300967943 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		22CEBEAF1E57D7C300967943 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		22CEBEB01E57D7C300967943 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		22CEBEB21E57D7C300967943 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = LoveBeen/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.DogeEggEgg.LoveBeen;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		22CEBEB31E57D7C300967943 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = LoveBeen/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.DogeEggEgg.LoveBeen;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		22CEBE951E57D7C200967943 /* Build configuration list for PBXProject "LoveBeen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22CEBEAF1E57D7C300967943 /* Debug */,
+				22CEBEB01E57D7C300967943 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		22CEBEB11E57D7C300967943 /* Build configuration list for PBXNativeTarget "LoveBeen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22CEBEB21E57D7C300967943 /* Debug */,
+				22CEBEB31E57D7C300967943 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 22CEBE921E57D7C200967943 /* Project object */;
+}
