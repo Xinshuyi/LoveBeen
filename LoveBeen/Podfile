@@ -1,0 +1,12 @@
+platform :ios, '8.0'
+target "LoveBeen"
+pod 'SDWebImage'
+pod 'FreeStreamer'
+pod 'MJExtension'
+pod 'MJRefresh'
+pod 'Masonry'
+pod 'AFNetworking'
+pod 'SVProgressHUD'
+pod 'FMDB'
+pod 'RealReachability'
+pod 'SDCycleScrollView'

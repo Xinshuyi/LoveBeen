@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface XSYLoveBeenFirstController : UIViewController
+@interface XSYLoveBeenFirstController : UITableViewController
 
 @end
