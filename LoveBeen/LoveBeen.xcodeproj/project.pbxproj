@@ -10,6 +10,29 @@
 		22CEBE9F1E57D7C300967943 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CEBE9E1E57D7C300967943 /* main.m */; };
 		22CEBEA21E57D7C300967943 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CEBEA11E57D7C300967943 /* AppDelegate.m */; };
 		22CEBEAA1E57D7C300967943 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22CEBEA91E57D7C300967943 /* Assets.xcassets */; };
+		22CEBED31E58099000967943 /* XSYLoveBeenIntroductionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CEBED21E58099000967943 /* XSYLoveBeenIntroductionController.m */; };
+		22CEBED81E5809E700967943 /* XSYLoveBeenNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CEBED71E5809E700967943 /* XSYLoveBeenNavigationController.m */; };
+		22CEBEDB1E5809F200967943 /* XSYLoveBeenTabbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CEBEDA1E5809F200967943 /* XSYLoveBeenTabbarController.m */; };
+		22CEBEFF1E580A5A00967943 /* NSArray+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CEBEDF1E580A5A00967943 /* NSArray+Log.m */; };
+		22CEBF001E580A5A00967943 /* NSAttributedString+CZAdditon.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CEBEE11E580A5A00967943 /* NSAttributedString+CZAdditon.m */; };
+		22CEBF011E580A5A00967943 /* NSObject+CZRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CEBEE31E580A5A00967943 /* NSObject+CZRuntime.m */; };
+		22CEBF021E580A5A00967943 /* NSString+CZBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CEBEE51E580A5A00967943 /* NSString+CZBase64.m */; };
+		22CEBF031E580A5A00967943 /* NSString+CZHash.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CEBEE71E580A5A00967943 /* NSString+CZHash.m */; };
+		22CEBF041E580A5A00967943 /* NSString+CZPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CEBEE91E580A5A00967943 /* NSString+CZPath.m */; };
+		22CEBF051E580A5A00967943 /* UIButton+CZAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CEBEEB1E580A5A00967943 /* UIButton+CZAddition.m */; };
+		22CEBF061E580A5A00967943 /* UIColor+CZAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CEBEED1E580A5A00967943 /* UIColor+CZAddition.m */; };
+		22CEBF071E580A5A00967943 /* UILabel+CZAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CEBEEF1E580A5A00967943 /* UILabel+CZAddition.m */; };
+		22CEBF081E580A5A00967943 /* UIScreen+CZAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CEBEF11E580A5A00967943 /* UIScreen+CZAddition.m */; };
+		22CEBF091E580A5A00967943 /* UIView+CZAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CEBEF31E580A5A00967943 /* UIView+CZAddition.m */; };
+		22CEBF0A1E580A5A00967943 /* UIViewController+CZAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CEBEF51E580A5A00967943 /* UIViewController+CZAddition.m */; };
+		22CEBF0B1E580A5A00967943 /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CEBEF81E580A5A00967943 /* UIBarButtonItem+Extension.m */; };
+		22CEBF0C1E580A5A00967943 /* UIButton+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CEBEFB1E580A5A00967943 /* UIButton+Helper.m */; };
+		22CEBF0D1E580A5A00967943 /* UILabel+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CEBEFE1E580A5A00967943 /* UILabel+Helper.m */; };
+		22CEBF111E580EB100967943 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CEBF101E580EB100967943 /* UIView+Extension.m */; };
+		22CEBF141E58214A00967943 /* XSYLoveBeenFirstController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CEBF131E58214A00967943 /* XSYLoveBeenFirstController.m */; };
+		22CEBF171E58216C00967943 /* XSYLoveBeenShoppingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CEBF161E58216C00967943 /* XSYLoveBeenShoppingController.m */; };
+		22CEBF1A1E5821E400967943 /* XSYLoveBeenMineController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CEBF191E5821E400967943 /* XSYLoveBeenMineController.m */; };
+		22CEBF231E583B1F00967943 /* XSYLoveBeenShopCarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CEBF221E583B1F00967943 /* XSYLoveBeenShopCarController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +42,54 @@
 		22CEBEA11E57D7C300967943 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		22CEBEA91E57D7C300967943 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		22CEBEAE1E57D7C300967943 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22CEBECF1E57F20200967943 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		22CEBED11E58099000967943 /* XSYLoveBeenIntroductionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSYLoveBeenIntroductionController.h; sourceTree = "<group>"; };
+		22CEBED21E58099000967943 /* XSYLoveBeenIntroductionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSYLoveBeenIntroductionController.m; sourceTree = "<group>"; };
+		22CEBED61E5809E700967943 /* XSYLoveBeenNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSYLoveBeenNavigationController.h; sourceTree = "<group>"; };
+		22CEBED71E5809E700967943 /* XSYLoveBeenNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSYLoveBeenNavigationController.m; sourceTree = "<group>"; };
+		22CEBED91E5809F200967943 /* XSYLoveBeenTabbarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSYLoveBeenTabbarController.h; sourceTree = "<group>"; };
+		22CEBEDA1E5809F200967943 /* XSYLoveBeenTabbarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSYLoveBeenTabbarController.m; sourceTree = "<group>"; };
+		22CEBEDD1E580A5A00967943 /* CZAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZAdditions.h; sourceTree = "<group>"; };
+		22CEBEDE1E580A5A00967943 /* NSArray+Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Log.h"; sourceTree = "<group>"; };
+		22CEBEDF1E580A5A00967943 /* NSArray+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Log.m"; sourceTree = "<group>"; };
+		22CEBEE01E580A5A00967943 /* NSAttributedString+CZAdditon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+CZAdditon.h"; sourceTree = "<group>"; };
+		22CEBEE11E580A5A00967943 /* NSAttributedString+CZAdditon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+CZAdditon.m"; sourceTree = "<group>"; };
+		22CEBEE21E580A5A00967943 /* NSObject+CZRuntime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+CZRuntime.h"; sourceTree = "<group>"; };
+		22CEBEE31E580A5A00967943 /* NSObject+CZRuntime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+CZRuntime.m"; sourceTree = "<group>"; };
+		22CEBEE41E580A5A00967943 /* NSString+CZBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CZBase64.h"; sourceTree = "<group>"; };
+		22CEBEE51E580A5A00967943 /* NSString+CZBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CZBase64.m"; sourceTree = "<group>"; };
+		22CEBEE61E580A5A00967943 /* NSString+CZHash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CZHash.h"; sourceTree = "<group>"; };
+		22CEBEE71E580A5A00967943 /* NSString+CZHash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CZHash.m"; sourceTree = "<group>"; };
+		22CEBEE81E580A5A00967943 /* NSString+CZPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CZPath.h"; sourceTree = "<group>"; };
+		22CEBEE91E580A5A00967943 /* NSString+CZPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CZPath.m"; sourceTree = "<group>"; };
+		22CEBEEA1E580A5A00967943 /* UIButton+CZAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+CZAddition.h"; sourceTree = "<group>"; };
+		22CEBEEB1E580A5A00967943 /* UIButton+CZAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+CZAddition.m"; sourceTree = "<group>"; };
+		22CEBEEC1E580A5A00967943 /* UIColor+CZAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+CZAddition.h"; sourceTree = "<group>"; };
+		22CEBEED1E580A5A00967943 /* UIColor+CZAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CZAddition.m"; sourceTree = "<group>"; };
+		22CEBEEE1E580A5A00967943 /* UILabel+CZAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+CZAddition.h"; sourceTree = "<group>"; };
+		22CEBEEF1E580A5A00967943 /* UILabel+CZAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+CZAddition.m"; sourceTree = "<group>"; };
+		22CEBEF01E580A5A00967943 /* UIScreen+CZAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScreen+CZAddition.h"; sourceTree = "<group>"; };
+		22CEBEF11E580A5A00967943 /* UIScreen+CZAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScreen+CZAddition.m"; sourceTree = "<group>"; };
+		22CEBEF21E580A5A00967943 /* UIView+CZAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+CZAddition.h"; sourceTree = "<group>"; };
+		22CEBEF31E580A5A00967943 /* UIView+CZAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CZAddition.m"; sourceTree = "<group>"; };
+		22CEBEF41E580A5A00967943 /* UIViewController+CZAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+CZAddition.h"; sourceTree = "<group>"; };
+		22CEBEF51E580A5A00967943 /* UIViewController+CZAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+CZAddition.m"; sourceTree = "<group>"; };
+		22CEBEF71E580A5A00967943 /* UIBarButtonItem+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Extension.h"; sourceTree = "<group>"; };
+		22CEBEF81E580A5A00967943 /* UIBarButtonItem+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Extension.m"; sourceTree = "<group>"; };
+		22CEBEFA1E580A5A00967943 /* UIButton+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Helper.h"; sourceTree = "<group>"; };
+		22CEBEFB1E580A5A00967943 /* UIButton+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Helper.m"; sourceTree = "<group>"; };
+		22CEBEFD1E580A5A00967943 /* UILabel+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+Helper.h"; sourceTree = "<group>"; };
+		22CEBEFE1E580A5A00967943 /* UILabel+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Helper.m"; sourceTree = "<group>"; };
+		22CEBF0F1E580EB100967943 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		22CEBF101E580EB100967943 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		22CEBF121E58214A00967943 /* XSYLoveBeenFirstController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSYLoveBeenFirstController.h; sourceTree = "<group>"; };
+		22CEBF131E58214A00967943 /* XSYLoveBeenFirstController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSYLoveBeenFirstController.m; sourceTree = "<group>"; };
+		22CEBF151E58216C00967943 /* XSYLoveBeenShoppingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSYLoveBeenShoppingController.h; sourceTree = "<group>"; };
+		22CEBF161E58216C00967943 /* XSYLoveBeenShoppingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSYLoveBeenShoppingController.m; sourceTree = "<group>"; };
+		22CEBF181E5821E400967943 /* XSYLoveBeenMineController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSYLoveBeenMineController.h; sourceTree = "<group>"; };
+		22CEBF191E5821E400967943 /* XSYLoveBeenMineController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSYLoveBeenMineController.m; sourceTree = "<group>"; };
+		22CEBF211E583B1F00967943 /* XSYLoveBeenShopCarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSYLoveBeenShopCarController.h; sourceTree = "<group>"; };
+		22CEBF221E583B1F00967943 /* XSYLoveBeenShopCarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSYLoveBeenShopCarController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +136,7 @@
 				22CEBEA91E57D7C300967943 /* Assets.xcassets */,
 				22CEBEAE1E57D7C300967943 /* Info.plist */,
 				22CEBE9E1E57D7C300967943 /* main.m */,
+				22CEBECF1E57F20200967943 /* PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -73,13 +145,13 @@
 			isa = PBXGroup;
 			children = (
 				22CEBEB51E57DED400967943 /* Extension */,
-				22CEBEB61E57DED400967943 /* FirstPage */,
-				22CEBEBA1E57DED400967943 /* FourthPage */,
+				22CEBECB1E57DED400967943 /* Tools */,
 				22CEBEBE1E57DED400967943 /* Libs */,
 				22CEBEBF1E57DED400967943 /* MainPage */,
+				22CEBEB61E57DED400967943 /* FirstPage */,
 				22CEBEC31E57DED400967943 /* SecondPage */,
 				22CEBEC71E57DED400967943 /* ThirdPage */,
-				22CEBECB1E57DED400967943 /* Tools */,
+				22CEBEBA1E57DED400967943 /* FourthPage */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -87,6 +159,11 @@
 		22CEBEB51E57DED400967943 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				22CEBF0E1E580EB100967943 /* UIView */,
+				22CEBEDC1E580A5A00967943 /* Additions */,
+				22CEBEF61E580A5A00967943 /* UIBarButtonItem */,
+				22CEBEF91E580A5A00967943 /* UIButton */,
+				22CEBEFC1E580A5A00967943 /* UILabel */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -104,6 +181,8 @@
 		22CEBEB71E57DED400967943 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				22CEBF121E58214A00967943 /* XSYLoveBeenFirstController.h */,
+				22CEBF131E58214A00967943 /* XSYLoveBeenFirstController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -135,6 +214,8 @@
 		22CEBEBB1E57DED400967943 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				22CEBF181E5821E400967943 /* XSYLoveBeenMineController.h */,
+				22CEBF191E5821E400967943 /* XSYLoveBeenMineController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -163,6 +244,8 @@
 		22CEBEBF1E57DED400967943 /* MainPage */ = {
 			isa = PBXGroup;
 			children = (
+				22CEBED51E5809BD00967943 /* NavigationController */,
+				22CEBED41E58099B00967943 /* TabbarController */,
 				22CEBEC01E57DED400967943 /* Controller */,
 				22CEBEC11E57DED400967943 /* Model */,
 				22CEBEC21E57DED400967943 /* View */,
@@ -173,6 +256,7 @@
 		22CEBEC01E57DED400967943 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				22CEBED01E58094700967943 /* IntroductionController */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -204,6 +288,8 @@
 		22CEBEC41E57DED400967943 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				22CEBF151E58216C00967943 /* XSYLoveBeenShoppingController.h */,
+				22CEBF161E58216C00967943 /* XSYLoveBeenShoppingController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -235,6 +321,8 @@
 		22CEBEC81E57DED400967943 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				22CEBF211E583B1F00967943 /* XSYLoveBeenShopCarController.h */,
+				22CEBF221E583B1F00967943 /* XSYLoveBeenShopCarController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -258,6 +346,101 @@
 			children = (
 			);
 			path = Tools;
+			sourceTree = "<group>";
+		};
+		22CEBED01E58094700967943 /* IntroductionController */ = {
+			isa = PBXGroup;
+			children = (
+				22CEBED11E58099000967943 /* XSYLoveBeenIntroductionController.h */,
+				22CEBED21E58099000967943 /* XSYLoveBeenIntroductionController.m */,
+			);
+			path = IntroductionController;
+			sourceTree = "<group>";
+		};
+		22CEBED41E58099B00967943 /* TabbarController */ = {
+			isa = PBXGroup;
+			children = (
+				22CEBED91E5809F200967943 /* XSYLoveBeenTabbarController.h */,
+				22CEBEDA1E5809F200967943 /* XSYLoveBeenTabbarController.m */,
+			);
+			path = TabbarController;
+			sourceTree = "<group>";
+		};
+		22CEBED51E5809BD00967943 /* NavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				22CEBED61E5809E700967943 /* XSYLoveBeenNavigationController.h */,
+				22CEBED71E5809E700967943 /* XSYLoveBeenNavigationController.m */,
+			);
+			path = NavigationController;
+			sourceTree = "<group>";
+		};
+		22CEBEDC1E580A5A00967943 /* Additions */ = {
+			isa = PBXGroup;
+			children = (
+				22CEBEDD1E580A5A00967943 /* CZAdditions.h */,
+				22CEBEDE1E580A5A00967943 /* NSArray+Log.h */,
+				22CEBEDF1E580A5A00967943 /* NSArray+Log.m */,
+				22CEBEE01E580A5A00967943 /* NSAttributedString+CZAdditon.h */,
+				22CEBEE11E580A5A00967943 /* NSAttributedString+CZAdditon.m */,
+				22CEBEE21E580A5A00967943 /* NSObject+CZRuntime.h */,
+				22CEBEE31E580A5A00967943 /* NSObject+CZRuntime.m */,
+				22CEBEE41E580A5A00967943 /* NSString+CZBase64.h */,
+				22CEBEE51E580A5A00967943 /* NSString+CZBase64.m */,
+				22CEBEE61E580A5A00967943 /* NSString+CZHash.h */,
+				22CEBEE71E580A5A00967943 /* NSString+CZHash.m */,
+				22CEBEE81E580A5A00967943 /* NSString+CZPath.h */,
+				22CEBEE91E580A5A00967943 /* NSString+CZPath.m */,
+				22CEBEEA1E580A5A00967943 /* UIButton+CZAddition.h */,
+				22CEBEEB1E580A5A00967943 /* UIButton+CZAddition.m */,
+				22CEBEEC1E580A5A00967943 /* UIColor+CZAddition.h */,
+				22CEBEED1E580A5A00967943 /* UIColor+CZAddition.m */,
+				22CEBEEE1E580A5A00967943 /* UILabel+CZAddition.h */,
+				22CEBEEF1E580A5A00967943 /* UILabel+CZAddition.m */,
+				22CEBEF01E580A5A00967943 /* UIScreen+CZAddition.h */,
+				22CEBEF11E580A5A00967943 /* UIScreen+CZAddition.m */,
+				22CEBEF21E580A5A00967943 /* UIView+CZAddition.h */,
+				22CEBEF31E580A5A00967943 /* UIView+CZAddition.m */,
+				22CEBEF41E580A5A00967943 /* UIViewController+CZAddition.h */,
+				22CEBEF51E580A5A00967943 /* UIViewController+CZAddition.m */,
+			);
+			path = Additions;
+			sourceTree = "<group>";
+		};
+		22CEBEF61E580A5A00967943 /* UIBarButtonItem */ = {
+			isa = PBXGroup;
+			children = (
+				22CEBEF71E580A5A00967943 /* UIBarButtonItem+Extension.h */,
+				22CEBEF81E580A5A00967943 /* UIBarButtonItem+Extension.m */,
+			);
+			path = UIBarButtonItem;
+			sourceTree = "<group>";
+		};
+		22CEBEF91E580A5A00967943 /* UIButton */ = {
+			isa = PBXGroup;
+			children = (
+				22CEBEFA1E580A5A00967943 /* UIButton+Helper.h */,
+				22CEBEFB1E580A5A00967943 /* UIButton+Helper.m */,
+			);
+			path = UIButton;
+			sourceTree = "<group>";
+		};
+		22CEBEFC1E580A5A00967943 /* UILabel */ = {
+			isa = PBXGroup;
+			children = (
+				22CEBEFD1E580A5A00967943 /* UILabel+Helper.h */,
+				22CEBEFE1E580A5A00967943 /* UILabel+Helper.m */,
+			);
+			path = UILabel;
+			sourceTree = "<group>";
+		};
+		22CEBF0E1E580EB100967943 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				22CEBF0F1E580EB100967943 /* UIView+Extension.h */,
+				22CEBF101E580EB100967943 /* UIView+Extension.m */,
+			);
+			path = UIView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,6 +469,7 @@
 		22CEBE921E57D7C200967943 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = XSYLoveBeen;
 				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = DogeEggEgg;
 				TargetAttributes = {
@@ -330,7 +514,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				22CEBEA21E57D7C300967943 /* AppDelegate.m in Sources */,
+				22CEBF171E58216C00967943 /* XSYLoveBeenShoppingController.m in Sources */,
 				22CEBE9F1E57D7C300967943 /* main.m in Sources */,
+				22CEBF031E580A5A00967943 /* NSString+CZHash.m in Sources */,
+				22CEBF111E580EB100967943 /* UIView+Extension.m in Sources */,
+				22CEBF071E580A5A00967943 /* UILabel+CZAddition.m in Sources */,
+				22CEBF0D1E580A5A00967943 /* UILabel+Helper.m in Sources */,
+				22CEBF1A1E5821E400967943 /* XSYLoveBeenMineController.m in Sources */,
+				22CEBF001E580A5A00967943 /* NSAttributedString+CZAdditon.m in Sources */,
+				22CEBF021E580A5A00967943 /* NSString+CZBase64.m in Sources */,
+				22CEBF0B1E580A5A00967943 /* UIBarButtonItem+Extension.m in Sources */,
+				22CEBF011E580A5A00967943 /* NSObject+CZRuntime.m in Sources */,
+				22CEBED81E5809E700967943 /* XSYLoveBeenNavigationController.m in Sources */,
+				22CEBF141E58214A00967943 /* XSYLoveBeenFirstController.m in Sources */,
+				22CEBF0C1E580A5A00967943 /* UIButton+Helper.m in Sources */,
+				22CEBEFF1E580A5A00967943 /* NSArray+Log.m in Sources */,
+				22CEBED31E58099000967943 /* XSYLoveBeenIntroductionController.m in Sources */,
+				22CEBF231E583B1F00967943 /* XSYLoveBeenShopCarController.m in Sources */,
+				22CEBF0A1E580A5A00967943 /* UIViewController+CZAddition.m in Sources */,
+				22CEBF081E580A5A00967943 /* UIScreen+CZAddition.m in Sources */,
+				22CEBF091E580A5A00967943 /* UIView+CZAddition.m in Sources */,
+				22CEBF041E580A5A00967943 /* NSString+CZPath.m in Sources */,
+				22CEBF051E580A5A00967943 /* UIButton+CZAddition.m in Sources */,
+				22CEBF061E580A5A00967943 /* UIColor+CZAddition.m in Sources */,
+				22CEBEDB1E5809F200967943 /* XSYLoveBeenTabbarController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,6 +637,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PREFIX_HEADER = LoveBeen/PrefixHeader.pch;
 				INFOPLIST_FILE = LoveBeen/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -443,6 +651,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PREFIX_HEADER = LoveBeen/PrefixHeader.pch;
 				INFOPLIST_FILE = LoveBeen/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

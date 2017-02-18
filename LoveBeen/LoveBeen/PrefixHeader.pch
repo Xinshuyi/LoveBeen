@@ -1,0 +1,33 @@
+//
+//  PrefixHeader.pch
+//  LoveBeen
+//
+//  Created by xin on 2017/2/18.
+//  Copyright © 2017年 DogeEggEgg. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#define IntroductionPageNumber 4
+#define IntroductionImageName @"guide"
+
+#define ScreenWidth [UIScreen mainScreen].bounds.size.width
+#define ScreenHeight [UIScreen mainScreen].bounds.size.height
+
+#define kNotificationChangeRootViewController @"ChangeRootViewController"
+#define CurrentRootViewController @"currentRootViewController"
+
+#define kHadUserAppBefore @"hadUserAppBefore"
+
+#define controllerNumber 4
+
+#define mainColor [UIColor colorWithRed:252 / 255.0 green:214 / 255.0 blue:51 / 255.0 alpha:1.0]
+
+#ifdef DEBUG
+# define NSLog(fmt, ...) NSLog((@"[函数名:%s]," "[行号:%d] \n" fmt), __FUNCTION__, __LINE__, ##__VA_ARGS__)
+#else
+# define NSLog(...)
+#endif
+
+#endif /* PrefixHeader_pch */
