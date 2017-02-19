@@ -12,5 +12,9 @@ typedef void(^SuccessBlock)(id response);
 typedef void(^FailureBlock)(NSError *error);
 
 @interface XSYLoveBeenNetworkingTools : NSObject
+/* 首页上半部分的数据*/
 + (void)getFirstPageDataWithSuccessBlock:(SuccessBlock)successBlock FailureBlock:(FailureBlock)failureBlock;
+
+/**首页下半部分的数据*/
++ (void)getFirstPageBottomWithSuccessBlock:(SuccessBlock)successBlock FailureBlock:(FailureBlock)failureBlock;
 @end

@@ -8,9 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
-@class XSYLoveBeenFirstPageModel;
+@class XSYLoveBeenFirstPageModel,XSYLoveBeenTableHeaderView;
+
+@protocol XSYLoveBeenTableHeaderViewDelegate <NSObject>
+
+- (void)didClickHeaderView:(XSYLoveBeenTableHeaderView *)header withTopURL:(NSURL *)url;
+
+@end
 
 @interface XSYLoveBeenTableHeaderView : UIView
+
+@property (nonatomic, weak) id<XSYLoveBeenTableHeaderViewDelegate> delegate;
+
 
 - (instancetype)initWithFrame:(CGRect)frame andTopMainModel:(XSYLoveBeenFirstPageModel *)topMainModel;
 

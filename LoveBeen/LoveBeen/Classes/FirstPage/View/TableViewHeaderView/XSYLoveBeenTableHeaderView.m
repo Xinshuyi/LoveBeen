@@ -22,7 +22,7 @@
 #define labelViewHeight self.bounds.size.height * 0.35 * 0.4
 #define eachWidth ScreenWidth / self.topMainModel.icons.count
 
-@interface XSYLoveBeenTableHeaderView ()
+@interface XSYLoveBeenTableHeaderView ()<SDCycleScrollViewDelegate>
 @property (nonatomic, strong) SDCycleScrollView *cycleView;
 @property (nonatomic, strong) NSMutableArray<UIButton *> *buttonArray;
 @property (nonatomic, strong) NSMutableArray<UILabel *> *labelArray;
@@ -44,8 +44,20 @@
     return self;
 }
 
+#pragma mark - delegate -
+- (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index{
+    [self sendDataWithDelegateWithURL:[NSURL URLWithString:self.topMainModel.focus[index].toURL]];
+}
+#pragma mark - button events -
 - (void)clickButtons:(UIButton *)button{
-    
+    [self sendDataWithDelegateWithURL:[NSURL URLWithString:self.topMainModel.icons[button.tag].customURL]];
+}
+
+#pragma mark - sendDataWithDelegate -
+- (void)sendDataWithDelegateWithURL:(NSURL *)url{
+    if ([self.delegate respondsToSelector:@selector(didClickHeaderView:withTopURL:)]) {
+        [self.delegate didClickHeaderView:self withTopURL:url];
+    }
 }
 
 #pragma mark - 设置子控件 -
@@ -59,6 +71,9 @@
     _cycleView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, ScreenWidth, cycleViewHeight) imageURLStringsGroup:imgArray];
     _cycleView.showPageControl = YES;
     _cycleView.currentPageDotColor = mainColor;
+    _cycleView.pageDotColor = BackgroundGray;
+    // 设置代理
+    _cycleView.delegate = self;
     [self addSubview:_cycleView];
 }
 

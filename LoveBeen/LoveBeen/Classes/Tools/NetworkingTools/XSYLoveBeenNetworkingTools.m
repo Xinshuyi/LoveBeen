@@ -10,6 +10,7 @@
 #import "NetworkingTools.h"
 #import <MJExtension.h>
 #import "XSYLoveBeenFirstPageModel.h"
+#import "XSYLoveBeenFirstPageBottomShoppingModel.h"
 
 @implementation XSYLoveBeenNetworkingTools
 + (void)getFirstPageDataWithSuccessBlock:(SuccessBlock)successBlock FailureBlock:(FailureBlock)failureBlock{
@@ -29,4 +30,24 @@
     }];
 }
 
++ (void)getFirstPageBottomWithSuccessBlock:(SuccessBlock)successBlock FailureBlock:(FailureBlock)failureBlock{
+    NSDictionary *para = @{@"call" : @"2"};
+    [[NetworkingTools shared] request:POST urlString:@"http://iosapi.itcast.cn/loveBeen/firstSell.json.php" parameters:para completeBlock:^(id response, NSError *error) {
+        if (error == nil) {
+            NSArray *modelArr = [XSYLoveBeenFirstPageBottomShoppingModel mj_objectArrayWithKeyValuesArray:response[@"data"]];
+            for (XSYLoveBeenFirstPageBottomShoppingModel *model in modelArr) {
+                model.numOfShopsInShoppingCar = 0;
+                model.isDecreaseButtonHidden = YES;
+                model.isIncreaseButtonHidden = (model.number == 0);
+            }
+            if (successBlock) {
+                successBlock(modelArr);
+            }
+        }else{
+            if (failureBlock) {
+                failureBlock(error);
+            }
+        }
+    }];
+}
 @end
