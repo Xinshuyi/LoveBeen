@@ -136,6 +136,7 @@ static NSString *firstPageBottomCellID = @"firstPageBottomCellID";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section == 0) {
         [self pushToWebViewControllerWithURL:[NSURL URLWithString:@"https://github.com/Xinshuyi"]];
+        return;
     }
 }
 
