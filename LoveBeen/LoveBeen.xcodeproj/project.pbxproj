@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		221A9B0A1E5B16C500288F27 /* XSYLoveBeenMyButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 221A9B091E5B16C500288F27 /* XSYLoveBeenMyButton.m */; };
 		223209DC1E5843E500D31713 /* NetworkingTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 223209DB1E5843E500D31713 /* NetworkingTools.m */; };
 		223209DF1E58440200D31713 /* XSYLoveBeenNetworkingTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 223209DE1E58440200D31713 /* XSYLoveBeenNetworkingTools.m */; };
 		223209E31E5860E800D31713 /* XSYLoveBeenTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 223209E21E5860E800D31713 /* XSYLoveBeenTableHeaderView.m */; };
@@ -54,6 +55,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		221A9B081E5B16C500288F27 /* XSYLoveBeenMyButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSYLoveBeenMyButton.h; sourceTree = "<group>"; };
+		221A9B091E5B16C500288F27 /* XSYLoveBeenMyButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSYLoveBeenMyButton.m; sourceTree = "<group>"; };
 		223209DA1E5843E500D31713 /* NetworkingTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkingTools.h; sourceTree = "<group>"; };
 		223209DB1E5843E500D31713 /* NetworkingTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkingTools.m; sourceTree = "<group>"; };
 		223209DD1E58440200D31713 /* XSYLoveBeenNetworkingTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSYLoveBeenNetworkingTools.h; sourceTree = "<group>"; };
@@ -157,6 +160,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		221A9B071E5B169300288F27 /* MyButton */ = {
+			isa = PBXGroup;
+			children = (
+				221A9B081E5B16C500288F27 /* XSYLoveBeenMyButton.h */,
+				221A9B091E5B16C500288F27 /* XSYLoveBeenMyButton.m */,
+			);
+			path = MyButton;
+			sourceTree = "<group>";
+		};
 		223209D91E5843A400D31713 /* NetworkingTools.mools */ = {
 			isa = PBXGroup;
 			children = (
@@ -383,6 +395,7 @@
 		22CEBEB91E57DED400967943 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				221A9B071E5B169300288F27 /* MyButton */,
 				22320A151E5AC64600D31713 /* DetailPageCell */,
 				22320A0C1E59F83500D31713 /* DetailPageHeader */,
 				223209F91E58B10800D31713 /* BottomTableViewCell */,
@@ -778,6 +791,7 @@
 			files = (
 				22CEBEA21E57D7C300967943 /* AppDelegate.m in Sources */,
 				22CEBF171E58216C00967943 /* XSYLoveBeenShoppingController.m in Sources */,
+				221A9B0A1E5B16C500288F27 /* XSYLoveBeenMyButton.m in Sources */,
 				22CEBE9F1E57D7C300967943 /* main.m in Sources */,
 				22320A1C1E5AD25A00D31713 /* XSYLoveBeenMapController.m in Sources */,
 				22CEBF031E580A5A00967943 /* NSString+CZHash.m in Sources */,

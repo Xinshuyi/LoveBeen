@@ -22,6 +22,7 @@
 #import "XSYLoveBeenFirstPageDetailController.h"
 #import "UIButton+Helper.h"
 #import "XSYLoveBeenMapController.h"
+#import "XSYLoveBeenMyButton.h"
 
 static NSString *firstPageTopCellID = @"firstPageTopCellID";
 static NSString *firstPageBottomCellID = @"firstPageBottomCellID";
@@ -42,11 +43,21 @@ static NSString *firstPageBottomCellID = @"firstPageBottomCellID";
     [self initialTableView];
     [self setHeaderAndFooter];
     [self setTitleView];
+    [self setLeftItemAndRightItem];
 }
 
 - (void)setTitleView{
-    UIButton *titleButton = [UIButton buttonWithTarget:self action:@selector(clickTitleViewButton:) image:nil title:@"在地图中定位" titleFont:[UIFont systemFontOfSize:15] titleColor:[UIColor blackColor]];
+    UIButton *titleButton = [UIButton buttonWithTarget:self action:@selector(clickTitleViewButton:) image:@"icon_mapmarker_small" title:@"在地图中定位" titleFont:[UIFont systemFontOfSize:15] titleColor:[UIColor blackColor]];
+    [titleButton sizeToFit];
     self.navigationItem.titleView = titleButton;
+}
+
+- (void)setLeftItemAndRightItem{
+    XSYLoveBeenMyButton *leftButton = [[XSYLoveBeenMyButton alloc] initButtonWithImageString:@"icon_black_scancode" title:@"扫一扫" frame:CGRectMake(0, 0, 25, 40.453)];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:leftButton];
+    
+    XSYLoveBeenMyButton *rightButton = [[XSYLoveBeenMyButton alloc] initButtonWithImageString:@"icon_search" title:@"搜索" frame:CGRectMake(0, 0, 25, 40.453)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:rightButton];
 }
 
 # pragma mark - titleView Event -
@@ -56,6 +67,9 @@ static NSString *firstPageBottomCellID = @"firstPageBottomCellID";
     
     // 接收mapviewcontroller 的地址定位传值
     mapController.mapBlock = ^(NSString *addressStr){
+        if (addressStr == nil) {
+            return;
+        }
         [tilteButton setTitle:addressStr forState:UIControlStateNormal];
     };
 }
@@ -173,6 +187,38 @@ static NSString *firstPageBottomCellID = @"firstPageBottomCellID";
     NSLog(@"%d isLeft       %d isIncrease isIncrease",isLeft,isIncrease);
     // 防止加入购物车的商品复用
 //    [self.tableView reloadData];
+    // 做动画
+    if (isIncrease) {
+        // 1. 获取起始点
+        CGPoint startPoint = botttomCell.frame.origin;
+        
+        // 2. 计算控制点
+        CGPoint controlPoint = CGPointMake(startPoint.x, startPoint.y);
+        // 3. 终点
+        CGPoint endPoint = CGPointMake(ScreenWidth / 4 * 2.5, ScreenHeight - 44);
+        
+        UIBezierPath *bezierPath = [UIBezierPath bezierPath];
+    
+        [bezierPath moveToPoint:startPoint];
+        [bezierPath addQuadCurveToPoint:endPoint controlPoint:controlPoint];
+
+        // 7. 创建keyFrame 动画对象
+        // keyPath: 表示的要对layer的哪个属性做动画
+        CAKeyframeAnimation *keyFrame = [CAKeyframeAnimation animationWithKeyPath:@"position"];
+        // 设置path
+        keyFrame.path = bezierPath.CGPath;
+        
+        // 设置动画时间
+        keyFrame.duration = 1;
+        
+        // 保持动画最新状态
+        keyFrame.removedOnCompletion = NO;
+        keyFrame.fillMode = kCAFillModeForwards;
+        
+
+        [botttomCell.layer addAnimation:keyFrame forKey:nil];
+
+    }
 }
 
 // 跳转detailcontroller
