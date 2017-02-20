@@ -29,6 +29,8 @@
 	</dict>
 	<key>UIMainStoryboardFile</key>
 	<string></string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>会使用到手机导航功能</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

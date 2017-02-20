@@ -14,6 +14,7 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - BaiduMapKit (3.1.0)
   - FMDB (2.6.2):
     - FMDB/standard (= 2.6.2)
   - FMDB/standard (2.6.2)
@@ -37,6 +38,7 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking
+  - BaiduMapKit
   - FMDB
   - FreeStreamer
   - Masonry
@@ -49,6 +51,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  BaiduMapKit: 4cfaedb118cff7e157e9771859a4bf65a261b2a1
   FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
   FreeStreamer: cc73d77f3adc114899c82b0d0a0dc16e077ec65d
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
@@ -60,6 +63,6 @@ SPEC CHECKSUMS:
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
   SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
 
-PODFILE CHECKSUM: ac3c5fc009f6fb7aea12592e25a93b976f17dd1c
+PODFILE CHECKSUM: 05e6e1fe3810d641c9bf1cd1fa2fa31a4a3ae0d0
 
 COCOAPODS: 1.1.1

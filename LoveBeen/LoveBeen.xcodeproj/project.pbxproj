@@ -24,6 +24,7 @@
 		22320A111E59F8D000D31713 /* XSYLoveBeenDetailPageHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22320A101E59F8D000D31713 /* XSYLoveBeenDetailPageHeaderView.xib */; };
 		22320A141E5AADDD00D31713 /* XSYLoveBeenFirstPageDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22320A131E5AADDD00D31713 /* XSYLoveBeenFirstPageDetailController.m */; };
 		22320A181E5AC68700D31713 /* XSYLoveBeenDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 22320A171E5AC68700D31713 /* XSYLoveBeenDetailCell.m */; };
+		22320A1C1E5AD25A00D31713 /* XSYLoveBeenMapController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22320A1B1E5AD25A00D31713 /* XSYLoveBeenMapController.m */; };
 		22CEBE9F1E57D7C300967943 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CEBE9E1E57D7C300967943 /* main.m */; };
 		22CEBEA21E57D7C300967943 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CEBEA11E57D7C300967943 /* AppDelegate.m */; };
 		22CEBEAA1E57D7C300967943 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22CEBEA91E57D7C300967943 /* Assets.xcassets */; };
@@ -85,6 +86,8 @@
 		22320A131E5AADDD00D31713 /* XSYLoveBeenFirstPageDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSYLoveBeenFirstPageDetailController.m; sourceTree = "<group>"; };
 		22320A161E5AC68700D31713 /* XSYLoveBeenDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSYLoveBeenDetailCell.h; sourceTree = "<group>"; };
 		22320A171E5AC68700D31713 /* XSYLoveBeenDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSYLoveBeenDetailCell.m; sourceTree = "<group>"; };
+		22320A1A1E5AD25A00D31713 /* XSYLoveBeenMapController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSYLoveBeenMapController.h; sourceTree = "<group>"; };
+		22320A1B1E5AD25A00D31713 /* XSYLoveBeenMapController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSYLoveBeenMapController.m; sourceTree = "<group>"; };
 		22CEBE9A1E57D7C300967943 /* LoveBeen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoveBeen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22CEBE9E1E57D7C300967943 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		22CEBEA01E57D7C300967943 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -271,6 +274,15 @@
 			path = DetailPageCell;
 			sourceTree = "<group>";
 		};
+		22320A191E5AD21C00D31713 /* MapController */ = {
+			isa = PBXGroup;
+			children = (
+				22320A1A1E5AD25A00D31713 /* XSYLoveBeenMapController.h */,
+				22320A1B1E5AD25A00D31713 /* XSYLoveBeenMapController.m */,
+			);
+			path = MapController;
+			sourceTree = "<group>";
+		};
 		22CEBE911E57D7C200967943 = {
 			isa = PBXGroup;
 			children = (
@@ -351,6 +363,7 @@
 		22CEBEB71E57DED400967943 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				22320A191E5AD21C00D31713 /* MapController */,
 				22320A081E59BE1400D31713 /* ShopsDetailController */,
 				22320A071E59BDF000D31713 /* WebViewController */,
 				22320A031E59BDAE00D31713 /* FirstController */,
@@ -766,6 +779,7 @@
 				22CEBEA21E57D7C300967943 /* AppDelegate.m in Sources */,
 				22CEBF171E58216C00967943 /* XSYLoveBeenShoppingController.m in Sources */,
 				22CEBE9F1E57D7C300967943 /* main.m in Sources */,
+				22320A1C1E5AD25A00D31713 /* XSYLoveBeenMapController.m in Sources */,
 				22CEBF031E580A5A00967943 /* NSString+CZHash.m in Sources */,
 				223209F41E58996B00D31713 /* XSYLoveBeenFirstPageTopCell.m in Sources */,
 				22CEBF111E580EB100967943 /* UIView+Extension.m in Sources */,

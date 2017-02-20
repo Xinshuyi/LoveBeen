@@ -20,6 +20,8 @@
 #import <MJRefresh.h>
 #import "XSYLoveBeenFirstPageWebViewController.h"
 #import "XSYLoveBeenFirstPageDetailController.h"
+#import "UIButton+Helper.h"
+#import "XSYLoveBeenMapController.h"
 
 static NSString *firstPageTopCellID = @"firstPageTopCellID";
 static NSString *firstPageBottomCellID = @"firstPageBottomCellID";
@@ -39,7 +41,25 @@ static NSString *firstPageBottomCellID = @"firstPageBottomCellID";
     [super viewDidLoad];
     [self initialTableView];
     [self setHeaderAndFooter];
+    [self setTitleView];
 }
+
+- (void)setTitleView{
+    UIButton *titleButton = [UIButton buttonWithTarget:self action:@selector(clickTitleViewButton:) image:nil title:@"在地图中定位" titleFont:[UIFont systemFontOfSize:15] titleColor:[UIColor blackColor]];
+    self.navigationItem.titleView = titleButton;
+}
+
+# pragma mark - titleView Event -
+- (void)clickTitleViewButton:(UIButton *)tilteButton{
+    XSYLoveBeenMapController *mapController = [[XSYLoveBeenMapController alloc] init];
+    [self.navigationController pushViewController:mapController animated:YES];
+    
+    // 接收mapviewcontroller 的地址定位传值
+    mapController.mapBlock = ^(NSString *addressStr){
+        [tilteButton setTitle:addressStr forState:UIControlStateNormal];
+    };
+}
+
 - (void)setHeaderAndFooter{
     // Set header
     XSYRefreshHeader *header = [XSYRefreshHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadData)];
