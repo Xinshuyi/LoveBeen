@@ -24,6 +24,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *leftDecreaseButton;
 @property (weak, nonatomic) IBOutlet UILabel *leftNumLabel;
 @property (weak, nonatomic) IBOutlet UILabel *leftShadowView;
+@property (weak, nonatomic) IBOutlet UIView *leftBackgroundView;
 
 
 @property (weak, nonatomic) IBOutlet UIImageView *rightImageView;
@@ -37,6 +38,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *rightIncreaseButton;
 @property (weak, nonatomic) IBOutlet UILabel *rightNumLabel;
 @property (weak, nonatomic) IBOutlet UILabel *rightShadowView;
+@property (weak, nonatomic) IBOutlet UIView *rightBackgroundView;
 
 @end
 
@@ -50,6 +52,17 @@
     self.leftSelectedLabel.layer.borderColor = [UIColor redColor].CGColor;
     self.rightSelectedLabel.layer.borderWidth = 1;
     self.rightSelectedLabel.layer.borderColor = [UIColor redColor].CGColor;
+    
+    // 给左右内容增加手势
+    // 左
+    UITapGestureRecognizer *leftTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(leftTapAction:)];
+    self.leftImageView.userInteractionEnabled = YES;
+    [self.leftImageView addGestureRecognizer:leftTap];
+    
+    // 右
+    UITapGestureRecognizer *rightTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(rightTapAction:)];
+    self.rightImageView.userInteractionEnabled = YES;
+    [self.rightImageView addGestureRecognizer:rightTap];
 }
 
 #pragma mark - set method -
@@ -129,6 +142,14 @@
     [self sendDataWithDelegateWithButton:sender Model:_leftModel isLeft:YES isIncrease:YES];
 }
 
+# pragma mark - tap events -
+- (void)leftTapAction:(UITapGestureRecognizer *)leftTap{
+    [self sendDataByDelegateWithIsLeft:YES bottomModel:_leftModel];
+}
+
+- (void)rightTapAction:(UITapGestureRecognizer *)rightTap{
+    [self sendDataByDelegateWithIsLeft:NO bottomModel:_rightModel];
+}
 
 // right
 - (IBAction)clickRightDecreaseButton:(UIButton *)sender {
@@ -171,6 +192,13 @@
 - (void)sendDataWithDelegateWithButton:(UIButton *)button Model:(XSYLoveBeenFirstPageBottomShoppingModel *)model isLeft:(BOOL)isLeft isIncrease:(BOOL)isIncrease{
     if ([self.delegate respondsToSelector:@selector(tableBottomCell:didClickIncreaseOrDecreaseButton:isIncrease:isLeft:)]) {
         [self.delegate tableBottomCell:self didClickIncreaseOrDecreaseButton:button isIncrease:isIncrease isLeft:isLeft];
+    }
+}
+
+// 代理传值提示控制器跳转detail控制器
+- (void)sendDataByDelegateWithIsLeft:(BOOL)isLeft bottomModel:(XSYLoveBeenFirstPageBottomShoppingModel *)bottomModel{
+    if ([self.delegate respondsToSelector:@selector(tableBottomCell:didClickDetailControllerWithIsLeft:bottomModel:)]) {
+        [self.delegate tableBottomCell:self didClickDetailControllerWithIsLeft:isLeft bottomModel:bottomModel];
     }
 }
 

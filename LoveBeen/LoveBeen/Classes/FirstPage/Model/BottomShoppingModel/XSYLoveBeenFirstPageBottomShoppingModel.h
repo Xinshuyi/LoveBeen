@@ -47,6 +47,11 @@
 @property (nonatomic, assign) NSUInteger numOfShopsInShoppingCar;
 
 /**
+ 品牌
+ */
+@property (nonatomic, copy) NSString *brand_name;
+
+/**
  加号是否隐藏
  */
 @property (nonatomic, assign) BOOL isIncreaseButtonHidden;

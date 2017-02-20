@@ -1,5 +1,5 @@
 //
-//  XSYLoveBeenDetailPageHeaderView.h
+//  XSYLoveBeenFirstPageDetailController.h
 //  LoveBeen
 //
 //  Created by xin on 2017/2/20.
@@ -10,9 +10,9 @@
 
 @class XSYLoveBeenFirstPageBottomShoppingModel;
 
-@interface XSYLoveBeenDetailPageHeaderView : UIView
+@interface XSYLoveBeenFirstPageDetailController : UITableViewController
 
 @property (nonatomic, strong) XSYLoveBeenFirstPageBottomShoppingModel *bottomModel;
 
-+ (instancetype)DetailPageHeaderView;
+
 @end

@@ -19,11 +19,12 @@
 #import "XSYRefreshHeader.h"
 #import <MJRefresh.h>
 #import "XSYLoveBeenFirstPageWebViewController.h"
+#import "XSYLoveBeenFirstPageDetailController.h"
 
 static NSString *firstPageTopCellID = @"firstPageTopCellID";
 static NSString *firstPageBottomCellID = @"firstPageBottomCellID";
 
-@interface XSYLoveBeenFirstController ()<XSYLoveBeenFirstPageTableBottomCellDelegate>
+@interface XSYLoveBeenFirstController ()<XSYLoveBeenFirstPageTableBottomCellDelegate, XSYLoveBeenTableHeaderViewDelegate>
 @property (nonatomic, strong) XSYLoveBeenFirstPageModel *topMainModel;
 @property (nonatomic, strong) XSYLoveBeenTableHeaderView *headerView;
 @property (nonatomic, strong) NSArray<XSYLoveBeenFirstPageBottomShoppingModel *> *shoppingModelArray;
@@ -54,6 +55,7 @@ static NSString *firstPageBottomCellID = @"firstPageBottomCellID";
     [self.tableView registerNib:[UINib nibWithNibName:@"XSYLoveBeenFirstPageTableBottomCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:firstPageBottomCellID];
 }
 - (void)setHeaderView{
+
     self.headerView = [[XSYLoveBeenTableHeaderView alloc] initWithFrame:CGRectMake(0, 0, 0, 200) andTopMainModel:self.topMainModel];
     self.tableView.tableHeaderView = self.headerView;
     self.headerView.delegate = self;
@@ -150,7 +152,14 @@ static NSString *firstPageBottomCellID = @"firstPageBottomCellID";
 - (void)tableBottomCell:(XSYLoveBeenFirstPageTableBottomCell *)botttomCell didClickIncreaseOrDecreaseButton:(UIButton *)button isIncrease:(BOOL)isIncrease isLeft:(BOOL)isLeft{
     NSLog(@"%d isLeft       %d isIncrease isIncrease",isLeft,isIncrease);
     // 防止加入购物车的商品复用
-    [self.tableView reloadData];
+//    [self.tableView reloadData];
+}
+
+// 跳转detailcontroller
+- (void)tableBottomCell:(XSYLoveBeenFirstPageTableBottomCell *)bottomCell didClickDetailControllerWithIsLeft:(BOOL)isLeft bottomModel:(XSYLoveBeenFirstPageBottomShoppingModel *)bottomModel{
+    XSYLoveBeenFirstPageDetailController *detailController = [[XSYLoveBeenFirstPageDetailController alloc] init];
+    detailController.bottomModel = bottomModel;
+    [self.navigationController pushViewController:detailController animated:YES];
 }
 
 // tableview header delegate

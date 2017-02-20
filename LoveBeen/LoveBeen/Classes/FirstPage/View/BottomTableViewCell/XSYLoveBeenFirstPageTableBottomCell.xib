@@ -302,6 +302,7 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="leftBackgroundView" destination="puB-D3-MbV" id="ebk-65-0Vw"/>
                 <outlet property="leftContainerLabel" destination="Djy-RY-fq9" id="Ph3-KC-hCK"/>
                 <outlet property="leftDecreaseButton" destination="lxf-o1-y4N" id="3vG-Z9-8lk"/>
                 <outlet property="leftDiscountLabel" destination="o8W-iV-dZc" id="Acn-dV-xIM"/>
@@ -313,6 +314,7 @@
                 <outlet property="leftSelectedLabel" destination="bpL-x3-9Ex" id="5jV-Nj-FaD"/>
                 <outlet property="leftShadowView" destination="0T0-eC-h7t" id="fxJ-Oy-3DS"/>
                 <outlet property="leftTitleLabel" destination="2gc-Ft-yFb" id="mFo-Yo-MoC"/>
+                <outlet property="rightBackgroundView" destination="O8e-zb-der" id="isY-pu-DRg"/>
                 <outlet property="rightContainerLabel" destination="z6f-qJ-lg0" id="2Yp-kF-Lf0"/>
                 <outlet property="rightDecreaseButton" destination="Tsv-zE-587" id="R37-Gd-Jkj"/>
                 <outlet property="rightDiscountLabel" destination="6ha-ge-O8z" id="9qE-Jy-jNs"/>
