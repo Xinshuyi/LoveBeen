@@ -13,7 +13,7 @@
 @protocol XSYLoveBeenFirstPageTableBottomCellDelegate <NSObject>
 
 // 防止复用 和 做动画
-- (void)tableBottomCell:(XSYLoveBeenFirstPageTableBottomCell *)botttomCell didClickIncreaseOrDecreaseButton:(UIButton *)button isIncrease:(BOOL)isIncrease isLeft:(BOOL)isLeft;
+- (void)tableBottomCell:(XSYLoveBeenFirstPageTableBottomCell *)botttomCell didClickIncreaseOrDecreaseButton:(UIButton *)button withImageView:(UIImageView *)imageView isIncrease:(BOOL)isIncrease isLeft:(BOOL)isLeft;
 
 // 点进详情页面
 - (void)tableBottomCell:(XSYLoveBeenFirstPageTableBottomCell *)bottomCell didClickDetailControllerWithIsLeft:(BOOL)isLeft bottomModel:(XSYLoveBeenFirstPageBottomShoppingModel *)bottomModel;

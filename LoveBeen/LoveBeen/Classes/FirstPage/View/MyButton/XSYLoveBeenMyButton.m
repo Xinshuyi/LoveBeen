@@ -17,6 +17,11 @@
 
 - (instancetype)initButtonWithImageString:(NSString *)imageString title:(NSString *)title frame:(CGRect)frame{
     if (self = [super initWithFrame:frame]) {
+        
+        // 增加手势
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapView)];
+        [self addGestureRecognizer:tap];
+        
         UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed: imageString]];
         
         [self addSubview:imageView];
@@ -38,6 +43,11 @@
         }];
     }
     return self;
+}
 
+- (void)tapView{
+    if ([self.delegate respondsToSelector:@selector(didClickMyButton:)]) {
+        [self.delegate didClickMyButton:self];
+    }
 }
 @end

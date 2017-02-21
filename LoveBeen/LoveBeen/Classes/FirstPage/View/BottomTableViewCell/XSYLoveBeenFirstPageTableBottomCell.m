@@ -125,7 +125,7 @@
     self.leftNumLabel.text = [NSString stringWithFormat:@"%02ld",self.leftModel.numOfShopsInShoppingCar];
     // 防止复用
     [self setIncreaseButtonIsHidden:self.leftIncreaseButton.hidden andSetDecreaseButtonIsHidden:self.leftDecreaseButton.hidden withModel:_leftModel];
-    [self sendDataWithDelegateWithButton:sender Model:_leftModel isLeft:YES isIncrease:NO];
+    [self sendDataWithDelegateWithButton:sender Model:_leftModel imageView:_leftImageView isLeft:YES isIncrease:NO];
 }
 - (IBAction)clickLeftIncreaseButton:(UIButton *)sender {
     self.leftDecreaseButton.hidden = NO;
@@ -139,7 +139,7 @@
     self.leftNumLabel.text = [NSString stringWithFormat:@"%02ld",self.leftModel.numOfShopsInShoppingCar];
     // 防止复用
     [self setIncreaseButtonIsHidden:self.leftIncreaseButton.hidden andSetDecreaseButtonIsHidden:self.leftDecreaseButton.hidden withModel:_leftModel];
-    [self sendDataWithDelegateWithButton:sender Model:_leftModel isLeft:YES isIncrease:YES];
+    [self sendDataWithDelegateWithButton:sender Model:_leftModel imageView:_leftImageView isLeft:YES isIncrease:YES];
 }
 
 # pragma mark - tap events -
@@ -160,7 +160,7 @@
     self.rightNumLabel.text = [NSString stringWithFormat:@"%02ld",self.rightModel.numOfShopsInShoppingCar];
     
       [self setIncreaseButtonIsHidden:self.rightIncreaseButton.hidden andSetDecreaseButtonIsHidden:self.rightDecreaseButton.hidden withModel:_rightModel];
-    [self sendDataWithDelegateWithButton:sender Model:_rightModel isLeft:NO isIncrease:NO];
+    [self sendDataWithDelegateWithButton:sender Model:_rightModel imageView:_rightImageView isLeft:NO isIncrease:NO];
 }
 
 - (IBAction)clickRightIncreaseButton:(UIButton *)sender {
@@ -175,7 +175,7 @@
     self.rightNumLabel.text = [NSString stringWithFormat:@"%02ld",self.rightModel.numOfShopsInShoppingCar];
     
      [self setIncreaseButtonIsHidden:self.rightIncreaseButton.hidden andSetDecreaseButtonIsHidden:self.rightDecreaseButton.hidden withModel:_rightModel];
-    [self sendDataWithDelegateWithButton:sender Model:_rightModel isLeft:NO isIncrease:YES];
+    [self sendDataWithDelegateWithButton:sender Model:_rightModel imageView:_rightImageView isLeft:NO isIncrease:YES];
 }
 
 #pragma mark - other method -
@@ -189,9 +189,9 @@
 }
 
 // 代理传值 矫正cell的复用
-- (void)sendDataWithDelegateWithButton:(UIButton *)button Model:(XSYLoveBeenFirstPageBottomShoppingModel *)model isLeft:(BOOL)isLeft isIncrease:(BOOL)isIncrease{
-    if ([self.delegate respondsToSelector:@selector(tableBottomCell:didClickIncreaseOrDecreaseButton:isIncrease:isLeft:)]) {
-        [self.delegate tableBottomCell:self didClickIncreaseOrDecreaseButton:button isIncrease:isIncrease isLeft:isLeft];
+- (void)sendDataWithDelegateWithButton:(UIButton *)button Model:(XSYLoveBeenFirstPageBottomShoppingModel *)model imageView:(UIImageView *)imageView isLeft:(BOOL)isLeft isIncrease:(BOOL)isIncrease{
+    if ([self.delegate respondsToSelector:@selector(tableBottomCell:didClickIncreaseOrDecreaseButton:withImageView:isIncrease:isLeft:)]) {
+        [self.delegate tableBottomCell:self didClickIncreaseOrDecreaseButton:button withImageView:imageView isIncrease:isIncrease isLeft:isLeft];
     }
 }
 

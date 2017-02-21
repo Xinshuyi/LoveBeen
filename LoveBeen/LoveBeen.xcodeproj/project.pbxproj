@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		221A9B0A1E5B16C500288F27 /* XSYLoveBeenMyButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 221A9B091E5B16C500288F27 /* XSYLoveBeenMyButton.m */; };
+		221A9B0E1E5BFD9400288F27 /* XSYLoveBeenShoppingCarTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 221A9B0D1E5BFD9400288F27 /* XSYLoveBeenShoppingCarTools.m */; };
+		221A9B121E5C246A00288F27 /* XSYLoveBeenQRControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 221A9B111E5C246A00288F27 /* XSYLoveBeenQRControllerViewController.m */; };
+		221A9B141E5C247900288F27 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 221A9B131E5C247900288F27 /* AVFoundation.framework */; };
 		223209DC1E5843E500D31713 /* NetworkingTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 223209DB1E5843E500D31713 /* NetworkingTools.m */; };
 		223209DF1E58440200D31713 /* XSYLoveBeenNetworkingTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 223209DE1E58440200D31713 /* XSYLoveBeenNetworkingTools.m */; };
 		223209E31E5860E800D31713 /* XSYLoveBeenTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 223209E21E5860E800D31713 /* XSYLoveBeenTableHeaderView.m */; };
@@ -57,6 +60,11 @@
 /* Begin PBXFileReference section */
 		221A9B081E5B16C500288F27 /* XSYLoveBeenMyButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSYLoveBeenMyButton.h; sourceTree = "<group>"; };
 		221A9B091E5B16C500288F27 /* XSYLoveBeenMyButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSYLoveBeenMyButton.m; sourceTree = "<group>"; };
+		221A9B0C1E5BFD9400288F27 /* XSYLoveBeenShoppingCarTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSYLoveBeenShoppingCarTools.h; sourceTree = "<group>"; };
+		221A9B0D1E5BFD9400288F27 /* XSYLoveBeenShoppingCarTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSYLoveBeenShoppingCarTools.m; sourceTree = "<group>"; };
+		221A9B101E5C246A00288F27 /* XSYLoveBeenQRControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSYLoveBeenQRControllerViewController.h; sourceTree = "<group>"; };
+		221A9B111E5C246A00288F27 /* XSYLoveBeenQRControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSYLoveBeenQRControllerViewController.m; sourceTree = "<group>"; };
+		221A9B131E5C247900288F27 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		223209DA1E5843E500D31713 /* NetworkingTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkingTools.h; sourceTree = "<group>"; };
 		223209DB1E5843E500D31713 /* NetworkingTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkingTools.m; sourceTree = "<group>"; };
 		223209DD1E58440200D31713 /* XSYLoveBeenNetworkingTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSYLoveBeenNetworkingTools.h; sourceTree = "<group>"; };
@@ -153,6 +161,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				221A9B141E5C247900288F27 /* AVFoundation.framework in Frameworks */,
 				FC265348CFA7B22165908716 /* libPods-LoveBeen.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -169,7 +178,25 @@
 			path = MyButton;
 			sourceTree = "<group>";
 		};
-		223209D91E5843A400D31713 /* NetworkingTools.mools */ = {
+		221A9B0B1E5BFD3F00288F27 /* ShoppingCarTools */ = {
+			isa = PBXGroup;
+			children = (
+				221A9B0C1E5BFD9400288F27 /* XSYLoveBeenShoppingCarTools.h */,
+				221A9B0D1E5BFD9400288F27 /* XSYLoveBeenShoppingCarTools.m */,
+			);
+			path = ShoppingCarTools;
+			sourceTree = "<group>";
+		};
+		221A9B0F1E5C23E400288F27 /* QR(二维码)Controller */ = {
+			isa = PBXGroup;
+			children = (
+				221A9B101E5C246A00288F27 /* XSYLoveBeenQRControllerViewController.h */,
+				221A9B111E5C246A00288F27 /* XSYLoveBeenQRControllerViewController.m */,
+			);
+			path = "QR(二维码)Controller";
+			sourceTree = "<group>";
+		};
+		223209D91E5843A400D31713 /* NetworkingTools */ = {
 			isa = PBXGroup;
 			children = (
 				223209DA1E5843E500D31713 /* NetworkingTools.h */,
@@ -177,7 +204,6 @@
 				223209DD1E58440200D31713 /* XSYLoveBeenNetworkingTools.h */,
 				223209DE1E58440200D31713 /* XSYLoveBeenNetworkingTools.m */,
 			);
-			name = NetworkingTools.mools;
 			path = NetworkingTools;
 			sourceTree = "<group>";
 		};
@@ -375,6 +401,7 @@
 		22CEBEB71E57DED400967943 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				221A9B0F1E5C23E400288F27 /* QR(二维码)Controller */,
 				22320A191E5AD21C00D31713 /* MapController */,
 				22320A081E59BE1400D31713 /* ShopsDetailController */,
 				22320A071E59BDF000D31713 /* WebViewController */,
@@ -549,7 +576,8 @@
 		22CEBECB1E57DED400967943 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
-				223209D91E5843A400D31713 /* NetworkingTools.mools */,
+				221A9B0B1E5BFD3F00288F27 /* ShoppingCarTools */,
+				223209D91E5843A400D31713 /* NetworkingTools */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -652,6 +680,7 @@
 		8975D6746BACFD3653796E59 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				221A9B131E5C247900288F27 /* AVFoundation.framework */,
 				88724557FC4681AD8BCD7000 /* libPods-LoveBeen.a */,
 			);
 			name = Frameworks;
@@ -807,6 +836,7 @@
 				223209EA1E587B2300D31713 /* XSYLoveBeenFirstPageModel.m in Sources */,
 				22CEBF0B1E580A5A00967943 /* UIBarButtonItem+Extension.m in Sources */,
 				223209F81E58AB6000D31713 /* XSYLoveBeenFirstPageBottomShoppingModel.m in Sources */,
+				221A9B121E5C246A00288F27 /* XSYLoveBeenQRControllerViewController.m in Sources */,
 				22CEBF011E580A5A00967943 /* NSObject+CZRuntime.m in Sources */,
 				223209F01E5883D100D31713 /* XSYLoveBeenFocusModel.m in Sources */,
 				22CEBED81E5809E700967943 /* XSYLoveBeenNavigationController.m in Sources */,
@@ -828,6 +858,7 @@
 				22CEBF041E580A5A00967943 /* NSString+CZPath.m in Sources */,
 				22CEBF051E580A5A00967943 /* UIButton+CZAddition.m in Sources */,
 				22320A021E596FBB00D31713 /* XSYRefreshHeader.m in Sources */,
+				221A9B0E1E5BFD9400288F27 /* XSYLoveBeenShoppingCarTools.m in Sources */,
 				22CEBF061E580A5A00967943 /* UIColor+CZAddition.m in Sources */,
 				22CEBEDB1E5809F200967943 /* XSYLoveBeenTabbarController.m in Sources */,
 			);

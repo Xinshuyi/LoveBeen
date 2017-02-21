@@ -23,11 +23,13 @@
 #import "UIButton+Helper.h"
 #import "XSYLoveBeenMapController.h"
 #import "XSYLoveBeenMyButton.h"
+#import "XSYLoveBeenShoppingCarTools.h"
+#import "XSYLoveBeenQRControllerViewController.h"
 
 static NSString *firstPageTopCellID = @"firstPageTopCellID";
 static NSString *firstPageBottomCellID = @"firstPageBottomCellID";
 
-@interface XSYLoveBeenFirstController ()<XSYLoveBeenFirstPageTableBottomCellDelegate, XSYLoveBeenTableHeaderViewDelegate>
+@interface XSYLoveBeenFirstController ()<XSYLoveBeenFirstPageTableBottomCellDelegate, XSYLoveBeenTableHeaderViewDelegate, CAAnimationDelegate,XSYLoveBeenMyButtonDelegate>
 @property (nonatomic, strong) XSYLoveBeenFirstPageModel *topMainModel;
 @property (nonatomic, strong) XSYLoveBeenTableHeaderView *headerView;
 @property (nonatomic, strong) NSArray<XSYLoveBeenFirstPageBottomShoppingModel *> *shoppingModelArray;
@@ -54,6 +56,7 @@ static NSString *firstPageBottomCellID = @"firstPageBottomCellID";
 
 - (void)setLeftItemAndRightItem{
     XSYLoveBeenMyButton *leftButton = [[XSYLoveBeenMyButton alloc] initButtonWithImageString:@"icon_black_scancode" title:@"扫一扫" frame:CGRectMake(0, 0, 25, 40.453)];
+    leftButton.delegate = self;
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:leftButton];
     
     XSYLoveBeenMyButton *rightButton = [[XSYLoveBeenMyButton alloc] initButtonWithImageString:@"icon_search" title:@"搜索" frame:CGRectMake(0, 0, 25, 40.453)];
@@ -183,42 +186,73 @@ static NSString *firstPageBottomCellID = @"firstPageBottomCellID";
 }
 
 // tableview bottom cell delegate
-- (void)tableBottomCell:(XSYLoveBeenFirstPageTableBottomCell *)botttomCell didClickIncreaseOrDecreaseButton:(UIButton *)button isIncrease:(BOOL)isIncrease isLeft:(BOOL)isLeft{
+- (void)tableBottomCell:(XSYLoveBeenFirstPageTableBottomCell *)botttomCell didClickIncreaseOrDecreaseButton:(UIButton *)button withImageView:(UIImageView *)imageView isIncrease:(BOOL)isIncrease isLeft:(BOOL)isLeft{
     NSLog(@"%d isLeft       %d isIncrease isIncrease",isLeft,isIncrease);
-    // 防止加入购物车的商品复用
-//    [self.tableView reloadData];
+    
     // 做动画
     if (isIncrease) {
-        // 1. 获取起始点
-        CGPoint startPoint = botttomCell.frame.origin;
         
-        // 2. 计算控制点
-        CGPoint controlPoint = CGPointMake(startPoint.x, startPoint.y);
-        // 3. 终点
+        // 购物车增加商品
+        [[XSYLoveBeenShoppingCarTools shared] addShoppingModel:isLeft ? botttomCell.leftModel : botttomCell.rightModel];
+        NSArray *array = [[XSYLoveBeenShoppingCarTools shared] getShoppingModels];
+        NSLog(@"%@",array);
+        
+        // 1. 获取起始点
+        CGPoint center = [imageView convertPoint:imageView.center toView:[UIApplication sharedApplication].keyWindow];
+        CGPoint startPoint = center;
+        
+        // 2. 终点
         CGPoint endPoint = CGPointMake(ScreenWidth / 4 * 2.5, ScreenHeight - 44);
         
+        // 3. 绘制贝塞尔曲线 (一条直线)
         UIBezierPath *bezierPath = [UIBezierPath bezierPath];
-    
         [bezierPath moveToPoint:startPoint];
-        [bezierPath addQuadCurveToPoint:endPoint controlPoint:controlPoint];
+        [bezierPath addLineToPoint:endPoint];
 
-        // 7. 创建keyFrame 动画对象
-        // keyPath: 表示的要对layer的哪个属性做动画
-        CAKeyframeAnimation *keyFrame = [CAKeyframeAnimation animationWithKeyPath:@"position"];
+        // 4. 实例化动画imageview 不能直接用imageview 会被覆盖
+        UIImageView *animateImageView = [[UIImageView alloc] initWithImage:imageView.image];
+        animateImageView.frame = imageView.frame;
+        [[UIApplication sharedApplication].keyWindow addSubview:animateImageView];
+       
+        // 5. 创建帧动画 作为 发生位移的动画对象
+        CAKeyframeAnimation *keyPositionFrame = [CAKeyframeAnimation animationWithKeyPath:@"position"];
         // 设置path
-        keyFrame.path = bezierPath.CGPath;
-        
+        keyPositionFrame.path = bezierPath.CGPath;
+        keyPositionFrame.delegate = self;
+        // 保持动画的结束状态
+        keyPositionFrame.removedOnCompletion = NO;
+        keyPositionFrame.fillMode = kCAFillModeBoth;
         // 设置动画时间
-        keyFrame.duration = 1;
+        keyPositionFrame.duration = 1;
         
-        // 保持动画最新状态
-        keyFrame.removedOnCompletion = NO;
-        keyFrame.fillMode = kCAFillModeForwards;
+        [keyPositionFrame setValue:animateImageView forKey:@"animateImageView"];
         
 
-        [botttomCell.layer addAnimation:keyFrame forKey:nil];
-
+        [animateImageView.layer addAnimation:keyPositionFrame forKey:nil];
+        
+        
+        // 创建使得imageview变小的动画对象
+        CABasicAnimation *scaleAnim = [CABasicAnimation animationWithKeyPath:@"transform"] ;
+        // 没有设置fromvalue说明当前状态作为初始值
+        scaleAnim.toValue = [NSValue valueWithCATransform3D:CATransform3DMakeScale(0, 0, 1)];
+        scaleAnim.duration = 1.1;
+        [animateImageView.layer addAnimation:scaleAnim forKey:nil];
+    }else{// 购物车减少商品
+        [[XSYLoveBeenShoppingCarTools shared] deleteShoppingModel:isLeft ? botttomCell.leftModel : botttomCell.rightModel];
+        NSArray *array = [[XSYLoveBeenShoppingCarTools shared] getShoppingModels];
+        [self setShoppingCarBadge];
+        NSLog(@"%@",array);
     }
+}
+
+#pragma mark - 动画结束
+- (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag {
+    
+    UIImageView *animateImageView = [anim valueForKey:@"animateImageView"];
+    
+    [animateImageView removeFromSuperview];
+    
+    [self setShoppingCarBadge];
 }
 
 // 跳转detailcontroller
@@ -233,10 +267,26 @@ static NSString *firstPageBottomCellID = @"firstPageBottomCellID";
     [self pushToWebViewControllerWithURL:url];
 }
 
+// left and right item event
+- (void)didClickMyButton:(XSYLoveBeenMyButton *)button{
+    if ([button isEqual:self.navigationItem.rightBarButtonItem]) {
+        return;
+    }
+    XSYLoveBeenQRControllerViewController *qrController = [[XSYLoveBeenQRControllerViewController alloc] init];
+    [self.navigationController pushViewController:qrController animated:YES];
+}
+
 #pragma mark - other method -
 - (void)pushToWebViewControllerWithURL:(NSURL *)url{
     XSYLoveBeenFirstPageWebViewController *webviewController = [[XSYLoveBeenFirstPageWebViewController alloc] init];
     [self.navigationController pushViewController:webviewController animated:YES];
     webviewController.url = url;
+}
+
+- (void)setShoppingCarBadge{
+    XSYLoveBeenShoppingCarTools *tool = [XSYLoveBeenShoppingCarTools shared];
+    NSUInteger num = [tool getTotalNumberOfShoppings];
+    NSString *numStr = [NSString stringWithFormat:@"%ld",num];
+    [self.tabBarController.tabBar.items[2] setBadgeValue:num == 0 ? nil : numStr];
 }
 @end
