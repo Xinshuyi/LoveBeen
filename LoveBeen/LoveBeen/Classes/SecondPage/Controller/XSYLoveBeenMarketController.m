@@ -15,11 +15,14 @@
 #import <Masonry.h>
 #import "XSYLoveBeenMarketLeftCell.h"
 #import "XSYLoveBeenMarketRightCell.h"
+#import <MJRefresh.h>
+#import "XSYRefreshHeader.h"
+#import "XSYLoveBeenShoppingCarTools.h"
 
 static NSString *leftTableViewCellID = @"leftTableViewCellID";
 static NSString *rightTableViewCellID = @"rightTableViewCellID";
 
-@interface XSYLoveBeenMarketController ()<UITableViewDelegate, UITableViewDataSource>
+@interface XSYLoveBeenMarketController ()<UITableViewDelegate, UITableViewDataSource,XSYLoveBeenMarketRightCellDelegate, CAAnimationDelegate>
 @property (nonatomic, strong) NSMutableArray<XSYLoveBeenCategoriesModel *> *mainModelArray;
 @property (nonatomic, strong) UITableView *leftTableView;
 @property (nonatomic, strong) UITableView *rightTableView;
@@ -32,7 +35,6 @@ static NSString *rightTableViewCellID = @"rightTableViewCellID";
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self basicSetting];
-    [self loadData];
     [self.view addSubview:self.leftTableView];
     [self.view addSubview:self.rightTableView];
     [self addConstaints];
@@ -61,6 +63,11 @@ static NSString *rightTableViewCellID = @"rightTableViewCellID";
     [SVProgressHUD show];
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
     self.leftIndexPath = indexPath;
+    XSYRefreshHeader *header = [XSYRefreshHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadData)];
+    
+    self.rightTableView.mj_header = header;
+    [self.rightTableView.mj_header beginRefreshing];
+
 }
 - (void)loadData{
     [XSYLoveBeenNetworkingTools getMarketPageWithSuccessBlock:^(id response) {
@@ -68,6 +75,7 @@ static NSString *rightTableViewCellID = @"rightTableViewCellID";
         [self.leftTableView reloadData];
         [self.rightTableView reloadData];
         [SVProgressHUD dismiss];
+        [self.rightTableView.mj_header endRefreshing];
     } FailureBlock:^(NSError *error) {
         [SVProgressHUD showErrorWithStatus:@"网络不佳"];
     }];
@@ -123,15 +131,96 @@ static NSString *rightTableViewCellID = @"rightTableViewCellID";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     if ([tableView isEqual:self.leftTableView]) {
+        
         XSYLoveBeenMarketLeftCell *leftCell = [tableView dequeueReusableCellWithIdentifier:leftTableViewCellID forIndexPath:indexPath];
         leftCell.categoriesModel = self.mainModelArray[indexPath.row];
-        NSLog(@"----2%ld%ld",self.leftIndexPath.section,self.leftIndexPath.row);
+
         leftCell.isSelected = [self.leftIndexPath isEqual:indexPath] ? YES : NO;
+        
         return leftCell;
     }
+    
     XSYLoveBeenMarketRightCell *rightCell = [tableView dequeueReusableCellWithIdentifier:rightTableViewCellID forIndexPath:indexPath];
+    
     rightCell.shoppingModel = self.mainModelArray[indexPath.section].products[indexPath.row];
+    
+    rightCell.delegate = self;
+    
     return rightCell;
+}
+
+#pragma mark - right cell delegate -
+- (void)rightCell:(XSYLoveBeenMarketRightCell *)rightCell didClickDecreaseButtonOrIncreaseIsIncrease:(BOOL)isIncrease WithImageView:(UIImageView *)imageView shoppingModel:(XSYLoveBeenFirstPageBottomShoppingModel *)shoppingModel{
+    
+    if (isIncrease) {
+        // 加入购物车
+        [self addShoppingCarWithShoppingModel:shoppingModel];
+        // 做动画
+        [self animationWithImageView:imageView];
+        
+            }else{
+        // 从购物车减去
+        [self deleteShoppingCarWithShoppingModel:shoppingModel];
+    }
+}
+
+#pragma mark - animate delegate -
+- (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag{
+    UIImageView *imageView = [anim valueForKey:@"animateImageView"];
+    [imageView removeFromSuperview];
+    
+    // 动画结束后显示购物车的物品数量
+    [self showShoppingCarTotalNumber];
+}
+
+#pragma mark - other method -
+
+- (void)animationWithImageView:(UIImageView *)imageView{
+    // 1. 起点
+    CGPoint startPoint = [imageView convertPoint:imageView.center toView:[UIApplication sharedApplication].keyWindow];
+    // 2. 终点
+    CGPoint endPoint = CGPointMake(ScreenWidth / 4 * 2.5, ScreenHeight - 44);
+    // 创建使得imageview移动的动画对象
+    CABasicAnimation *positionAnim = [CABasicAnimation animationWithKeyPath:@"position"];
+    positionAnim.fromValue = [NSValue valueWithCGPoint:startPoint];
+    positionAnim.toValue = [NSValue valueWithCGPoint:endPoint];
+    positionAnim.duration = 1;
+    positionAnim.delegate = self;
+    positionAnim.removedOnCompletion = NO;
+    positionAnim.fillMode = kCAFillModeBoth;
+    
+    UIImageView *animateImageView = [[UIImageView alloc] initWithFrame:imageView.frame];
+    animateImageView.image = imageView.image;
+    
+    [positionAnim setValue:animateImageView forKey:@"animateImageView"];
+    
+    [[UIApplication sharedApplication].keyWindow addSubview:animateImageView];
+    
+    [animateImageView.layer addAnimation:positionAnim forKey:nil];
+    
+    // 创建使得imageview变小的动画对象
+    CABasicAnimation *scaleAnim = [CABasicAnimation animationWithKeyPath:@"transform"] ;
+    // 没有设置fromvalue说明当前状态作为初始值
+    scaleAnim.toValue = [NSValue valueWithCATransform3D:CATransform3DMakeScale(0, 0, 1)];
+    scaleAnim.duration = 1.1;
+    [animateImageView.layer addAnimation:scaleAnim forKey:nil];
+}
+
+- (void)showShoppingCarTotalNumber{
+    XSYLoveBeenShoppingCarTools *shoppingTools = [XSYLoveBeenShoppingCarTools shared];
+    NSUInteger totalNum = [shoppingTools getTotalNumberOfShoppings];
+    [self.tabBarController.tabBar.items[2] setBadgeValue:totalNum == 0 ? nil : [NSString stringWithFormat:@"%ld",totalNum]];
+}
+
+- (void)addShoppingCarWithShoppingModel:(XSYLoveBeenFirstPageBottomShoppingModel *)shoppingModel{
+    [[XSYLoveBeenShoppingCarTools shared] addShoppingModel:shoppingModel];
+}
+
+- (void)deleteShoppingCarWithShoppingModel:(XSYLoveBeenFirstPageBottomShoppingModel *)shoppingModel{
+    [[XSYLoveBeenShoppingCarTools shared] deleteShoppingModel:shoppingModel];
+    
+    // 显示真正数量
+    [self showShoppingCarTotalNumber];
 }
 
 #pragma mark - lazy -

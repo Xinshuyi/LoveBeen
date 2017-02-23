@@ -58,11 +58,15 @@
     [[NetworkingTools shared] request:POST urlString:urlStr parameters:para completeBlock:^(id response, NSError *error) {
         if (error == nil) {
             NSArray<XSYLoveBeenCategoriesModel *> *categories = [XSYLoveBeenCategoriesModel mj_objectArrayWithKeyValuesArray:response[@"data"][@"categories"]];
-            NSLog(@"%@",categories);
             for (int i = 0; i < categories.count; i ++) {
                 NSString *key = categories[i].ID;
                 NSArray *miniArray = response[@"data"][@"products"][key];
                 categories[i].products = [XSYLoveBeenFirstPageBottomShoppingModel mj_objectArrayWithKeyValuesArray:miniArray];
+                for (XSYLoveBeenFirstPageBottomShoppingModel *model in categories[i].products) {
+                    model.numOfShopsInShoppingCar = 0;
+                    model.isDecreaseButtonHidden = YES;
+                    model.isIncreaseButtonHidden = (model.number == 0);
+                }
             }
             if (successBlock) {
                 successBlock(categories);

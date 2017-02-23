@@ -8,11 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
-@class XSYLoveBeenFirstPageBottomShoppingModel;
+@class XSYLoveBeenFirstPageBottomShoppingModel,XSYLoveBeenMarketRightCell;
+@protocol XSYLoveBeenMarketRightCellDelegate <NSObject>
+
+- (void)rightCell:(XSYLoveBeenMarketRightCell *)rightCell didClickDecreaseButtonOrIncreaseIsIncrease:(BOOL)isIncrease WithImageView:(UIImageView *)imageView shoppingModel:(XSYLoveBeenFirstPageBottomShoppingModel *)shoppingModel;
+
+@end
 
 @interface XSYLoveBeenMarketRightCell : UITableViewCell
 
 @property (nonatomic, strong) XSYLoveBeenFirstPageBottomShoppingModel *shoppingModel;
 
+@property (nonatomic, weak) id<XSYLoveBeenMarketRightCellDelegate> delegate;
 
 @end

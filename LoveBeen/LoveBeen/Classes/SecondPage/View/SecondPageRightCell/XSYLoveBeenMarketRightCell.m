@@ -13,6 +13,7 @@
 #import <UIImageView+WebCache.h>
 #import "XSYLoveBeenFirstPageBottomShoppingModel.h"
 #import <Masonry.h>
+#import <SVProgressHUD.h>
 
 @interface XSYLoveBeenMarketRightCell ()
 @property (nonatomic, strong) UIImageView *iconView;
@@ -24,6 +25,8 @@
 @property (strong, nonatomic) UIButton *increaseButton;
 @property (strong, nonatomic) UIButton *decreaseButton;
 @property (strong, nonatomic) UILabel *numLabel;
+@property (nonatomic, strong) UILabel *shadowView;
+
 @end
 
 @implementation XSYLoveBeenMarketRightCell
@@ -40,6 +43,7 @@
         [self.contentView addSubview:self.decreaseButton];
         [self.contentView addSubview:self.numLabel];
         [self.contentView addSubview:self.increaseButton];
+        [self.contentView addSubview:self.shadowView];
         [self addConstraints];
     }
     return self;
@@ -48,12 +52,38 @@
 #pragma mark - click button events -
 - (void)clickIncreaseButton:(UIButton *)button{
     
+    self.decreaseButton.hidden = NO;
+    self.shoppingModel.isDecreaseButtonHidden = NO;
+    
+    if (self.shoppingModel.numOfShopsInShoppingCar + 1 > self.shoppingModel.number) {
+        [SVProgressHUD showErrorWithStatus:@"库存不足"];
+        button.hidden = YES;
+        self.shoppingModel.isIncreaseButtonHidden = YES;
+        return;
+    }
+    self.shoppingModel.numOfShopsInShoppingCar ++;
+    self.numLabel.text = [NSString stringWithFormat:@"%02ld",self.shoppingModel.numOfShopsInShoppingCar];
+    [self sendDataByDelegateWithIsIncrease:YES];
 }
 
 - (void)clickDecreaseButton:(UIButton *)button{
     
+    self.increaseButton.hidden = NO;
+    self.shoppingModel.isIncreaseButtonHidden = NO;
+    
+    self.shoppingModel.numOfShopsInShoppingCar -- ;
+    button.hidden = !self.shoppingModel.numOfShopsInShoppingCar;
+    self.shoppingModel.isDecreaseButtonHidden = button.hidden;
+    self.numLabel.text = [NSString stringWithFormat:@"%02ld",self.shoppingModel.numOfShopsInShoppingCar];
+    
+    [self sendDataByDelegateWithIsIncrease:NO];
 }
 
+- (void)sendDataByDelegateWithIsIncrease:(BOOL)isIncrease{
+    if ([self.delegate respondsToSelector:@selector(rightCell:didClickDecreaseButtonOrIncreaseIsIncrease:WithImageView:shoppingModel:)]) {
+        [self.delegate rightCell:self didClickDecreaseButtonOrIncreaseIsIncrease:isIncrease WithImageView:self.iconView shoppingModel:self.shoppingModel];
+    }
+}
 #pragma mark - addConstraints -
 - (void)addConstraints{
     [self.iconView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -106,11 +136,21 @@
         make.leading.equalTo(self.decreaseButton.mas_trailing).offset(4);
         make.height.mas_equalTo(20);
     }];
+    
+    [self.shadowView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.contentView);
+    }];
 }
 
 #pragma mark - set method -
 - (void)setShoppingModel:(XSYLoveBeenFirstPageBottomShoppingModel *)shoppingModel{
     _shoppingModel = shoppingModel;
+    // 防止复用
+    self.numLabel.text = shoppingModel.number == 0 ? nil : [NSString stringWithFormat:@"%02ld",shoppingModel.numOfShopsInShoppingCar];
+    self.increaseButton.hidden = shoppingModel.isIncreaseButtonHidden;
+    self.decreaseButton.hidden = shoppingModel.isDecreaseButtonHidden;
+    
+    self.shadowView.hidden = shoppingModel.number;
     [self.iconView sd_setImageWithURL:[NSURL URLWithString:shoppingModel.img] placeholderImage:[UIImage imageNamed:@"doge"]];
     self.titleLable.text = shoppingModel.name;
     self.specificsLabel.text = shoppingModel.specifics;
@@ -193,5 +233,15 @@
         _numLabel.textAlignment = NSTextAlignmentCenter;
     }
     return _numLabel;
+}
+
+- (UILabel *)shadowView{
+    if (_shadowView == nil) {
+        _shadowView = [UILabel labelWithtextColor:[UIColor blackColor] font:[UIFont systemFontOfSize:18] text:@"暂时缺货"];
+        _shadowView.textAlignment = NSTextAlignmentCenter;
+        _shadowView.backgroundColor = [UIColor colorWithWhite:0.5 alpha:0.5];
+        _shadowView.hidden = YES;
+    }
+    return _shadowView;
 }
 @end
