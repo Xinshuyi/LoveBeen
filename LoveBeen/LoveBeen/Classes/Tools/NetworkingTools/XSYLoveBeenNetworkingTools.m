@@ -11,6 +11,7 @@
 #import <MJExtension.h>
 #import "XSYLoveBeenFirstPageModel.h"
 #import "XSYLoveBeenFirstPageBottomShoppingModel.h"
+#import "XSYLoveBeenCategoriesModel.h"
 
 @implementation XSYLoveBeenNetworkingTools
 + (void)getFirstPageDataWithSuccessBlock:(SuccessBlock)successBlock FailureBlock:(FailureBlock)failureBlock{
@@ -47,6 +48,27 @@
             if (failureBlock) {
                 failureBlock(error);
             }
+        }
+    }];
+}
+
++ (void)getMarketPageWithSuccessBlock:(SuccessBlock)successBlock FailureBlock:(FailureBlock)failureBlock{
+    NSString *urlStr = @"http://iosapi.itcast.cn/loveBeen/supermarket.json.php";
+    NSDictionary *para = @{@"call":@"5"};
+    [[NetworkingTools shared] request:POST urlString:urlStr parameters:para completeBlock:^(id response, NSError *error) {
+        if (error == nil) {
+            NSArray<XSYLoveBeenCategoriesModel *> *categories = [XSYLoveBeenCategoriesModel mj_objectArrayWithKeyValuesArray:response[@"data"][@"categories"]];
+            NSLog(@"%@",categories);
+            for (int i = 0; i < categories.count; i ++) {
+                NSString *key = categories[i].ID;
+                NSArray *miniArray = response[@"data"][@"products"][key];
+                categories[i].products = [XSYLoveBeenFirstPageBottomShoppingModel mj_objectArrayWithKeyValuesArray:miniArray];
+            }
+            if (successBlock) {
+                successBlock(categories);
+            }
+        }else{
+            
         }
     }];
 }

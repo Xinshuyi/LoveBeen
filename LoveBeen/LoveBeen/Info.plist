@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
-	<string>en</string>
+	<string>zh_CN</string>
 	<key>CFBundleDisplayName</key>
 	<string>爱鲜蜂</string>
 	<key>CFBundleExecutable</key>
@@ -31,6 +31,10 @@
 	<string></string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>会使用到手机导航功能</string>
+	<key>NSCameraUsageDescription</key>
+	<string>会使用到相机功能</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>会使用到相册功能</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

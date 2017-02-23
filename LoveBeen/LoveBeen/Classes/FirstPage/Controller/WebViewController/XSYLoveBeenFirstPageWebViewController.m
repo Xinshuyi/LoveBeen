@@ -27,7 +27,9 @@
     // 设置代理
     webview.delegate = self;
 }
-
+- (void)viewWillDisappear:(BOOL)animated{
+    [SVProgressHUD dismiss];
+}
 - (void)webViewDidStartLoad:(UIWebView *)webView{
     [SVProgressHUD showWithStatus:@"加载中"];
 }

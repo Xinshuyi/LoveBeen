@@ -9,6 +9,7 @@
 #import "XSYLoveBeenQRControllerViewController.h"
 #import <AVFoundation/AVFoundation.h>
 #import <Masonry.h>
+#import "sys/utsname.h"
 
 @interface XSYLoveBeenQRControllerViewController ()<AVCaptureMetadataOutputObjectsDelegate
 >
@@ -26,24 +27,49 @@
     [self.view addSubview:self.lineImageView];
     [self setSubviewFrame];
     [self startAnimation];
+    BOOL isAvailable = [self cameraIsAvailable];
+    if (isAvailable) {
+        [self setupQRSetting];
+    }else{
+        [self alertViewOfUsingMobile];
+    }
+}
+
+- (void)alertViewOfUsingMobile{
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"请用真机" message:nil preferredStyle:UIAlertControllerStyleAlert];
+    
+    // 添加确定action
+    UIAlertAction *sureAction = [UIAlertAction actionWithTitle:@"离开" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+        
+        // 退回到前一页
+        [self.navigationController popViewControllerAnimated:YES];
+    }];
+    [alertController addAction:sureAction];
+    // 展现提示框
+    [self presentViewController:alertController animated:YES completion:nil];
+}
+
+// 判断相机是否可用
+-(BOOL)cameraIsAvailable
+{
+    struct utsname systemInfo;
+    uname(&systemInfo);
+    NSString * deviceString = [NSString stringWithCString:systemInfo.machine encoding:NSUTF8StringEncoding];
+    if([deviceString isEqualToString:@"x86_64"]){
+        return false;
+    }
+    return true;
+}
+- (void)setupQRSetting{
     // 1. 创建输入
     AVCaptureDevice *cameraDevice = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
     AVCaptureInput *input = [AVCaptureDeviceInput deviceInputWithDevice:cameraDevice error:nil];
-    
-    
     // 2. 创建输出
     AVCaptureMetadataOutput *output = [AVCaptureMetadataOutput new];
-    
     // 2.1 设置代理，实现数据获取
     [output setMetadataObjectsDelegate:self queue:dispatch_get_main_queue()];
-    
-    
-    
-    
     // 3. 创建会话
     self.session = [AVCaptureSession new];
-    
-    
     // 4. 关联输入和输出到会话中
     if([self.session canAddInput:input]) {
         [self.session addInput:input];
@@ -51,18 +77,13 @@
     if([self.session canAddOutput:output]) {
         [self.session addOutput:output];
     }
-    
-    
     // 2.2 设置识别类型(注意输出必须先添加到session中)
     // 二维码 AVMetadataObjectTypeQRCode
     output.metadataObjectTypes = @[AVMetadataObjectTypeQRCode];
-    
     // 5. 设置预览
     AVCaptureVideoPreviewLayer *previewLayer = [AVCaptureVideoPreviewLayer layerWithSession:self.session];
     previewLayer.frame = self.view.bounds;
     [self.view.layer insertSublayer:previewLayer atIndex:0];
-    
-    
     // 6. 启动会话
     [self.session startRunning];
 }
@@ -91,11 +112,7 @@
         
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:obj.stringValue]];
     }
-    
-    
-    
 }
-
 
 #pragma mark - lazy -
 - (UIImageView *)areaImageView{

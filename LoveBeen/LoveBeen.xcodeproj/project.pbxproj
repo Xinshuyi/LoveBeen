@@ -11,6 +11,8 @@
 		221A9B0E1E5BFD9400288F27 /* XSYLoveBeenShoppingCarTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 221A9B0D1E5BFD9400288F27 /* XSYLoveBeenShoppingCarTools.m */; };
 		221A9B121E5C246A00288F27 /* XSYLoveBeenQRControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 221A9B111E5C246A00288F27 /* XSYLoveBeenQRControllerViewController.m */; };
 		221A9B141E5C247900288F27 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 221A9B131E5C247900288F27 /* AVFoundation.framework */; };
+		221A9B191E5C699800288F27 /* XSYLoveBeenCategoriesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 221A9B181E5C699800288F27 /* XSYLoveBeenCategoriesModel.m */; };
+		221A9B1C1E5C6AD000288F27 /* XSYLoveBeenProductsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 221A9B1B1E5C6AD000288F27 /* XSYLoveBeenProductsModel.m */; };
 		223209DC1E5843E500D31713 /* NetworkingTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 223209DB1E5843E500D31713 /* NetworkingTools.m */; };
 		223209DF1E58440200D31713 /* XSYLoveBeenNetworkingTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 223209DE1E58440200D31713 /* XSYLoveBeenNetworkingTools.m */; };
 		223209E31E5860E800D31713 /* XSYLoveBeenTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 223209E21E5860E800D31713 /* XSYLoveBeenTableHeaderView.m */; };
@@ -51,9 +53,12 @@
 		22CEBF0C1E580A5A00967943 /* UIButton+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CEBEFB1E580A5A00967943 /* UIButton+Helper.m */; };
 		22CEBF0D1E580A5A00967943 /* UILabel+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CEBEFE1E580A5A00967943 /* UILabel+Helper.m */; };
 		22CEBF111E580EB100967943 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CEBF101E580EB100967943 /* UIView+Extension.m */; };
-		22CEBF171E58216C00967943 /* XSYLoveBeenShoppingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CEBF161E58216C00967943 /* XSYLoveBeenShoppingController.m */; };
+		22CEBF171E58216C00967943 /* XSYLoveBeenMarketController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CEBF161E58216C00967943 /* XSYLoveBeenMarketController.m */; };
 		22CEBF1A1E5821E400967943 /* XSYLoveBeenMineController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CEBF191E5821E400967943 /* XSYLoveBeenMineController.m */; };
 		22CEBF231E583B1F00967943 /* XSYLoveBeenShopCarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CEBF221E583B1F00967943 /* XSYLoveBeenShopCarController.m */; };
+		22EA4E5F1E5D5BB7009AF09B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 22EA4E5E1E5D5BB7009AF09B /* Info.plist */; };
+		22EA4E641E5D7E70009AF09B /* XSYLoveBeenMarketLeftCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 22EA4E631E5D7E70009AF09B /* XSYLoveBeenMarketLeftCell.m */; };
+		22EA4E671E5D8F88009AF09B /* XSYLoveBeenMarketRightCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 22EA4E661E5D8F88009AF09B /* XSYLoveBeenMarketRightCell.m */; };
 		FC265348CFA7B22165908716 /* libPods-LoveBeen.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 88724557FC4681AD8BCD7000 /* libPods-LoveBeen.a */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +70,10 @@
 		221A9B101E5C246A00288F27 /* XSYLoveBeenQRControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSYLoveBeenQRControllerViewController.h; sourceTree = "<group>"; };
 		221A9B111E5C246A00288F27 /* XSYLoveBeenQRControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSYLoveBeenQRControllerViewController.m; sourceTree = "<group>"; };
 		221A9B131E5C247900288F27 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		221A9B171E5C699800288F27 /* XSYLoveBeenCategoriesModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSYLoveBeenCategoriesModel.h; sourceTree = "<group>"; };
+		221A9B181E5C699800288F27 /* XSYLoveBeenCategoriesModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSYLoveBeenCategoriesModel.m; sourceTree = "<group>"; };
+		221A9B1A1E5C6AD000288F27 /* XSYLoveBeenProductsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSYLoveBeenProductsModel.h; sourceTree = "<group>"; };
+		221A9B1B1E5C6AD000288F27 /* XSYLoveBeenProductsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSYLoveBeenProductsModel.m; sourceTree = "<group>"; };
 		223209DA1E5843E500D31713 /* NetworkingTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkingTools.h; sourceTree = "<group>"; };
 		223209DB1E5843E500D31713 /* NetworkingTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkingTools.m; sourceTree = "<group>"; };
 		223209DD1E58440200D31713 /* XSYLoveBeenNetworkingTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSYLoveBeenNetworkingTools.h; sourceTree = "<group>"; };
@@ -104,7 +113,6 @@
 		22CEBEA01E57D7C300967943 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		22CEBEA11E57D7C300967943 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		22CEBEA91E57D7C300967943 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		22CEBEAE1E57D7C300967943 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22CEBECF1E57F20200967943 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		22CEBED11E58099000967943 /* XSYLoveBeenIntroductionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSYLoveBeenIntroductionController.h; sourceTree = "<group>"; };
 		22CEBED21E58099000967943 /* XSYLoveBeenIntroductionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSYLoveBeenIntroductionController.m; sourceTree = "<group>"; };
@@ -145,12 +153,17 @@
 		22CEBEFE1E580A5A00967943 /* UILabel+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Helper.m"; sourceTree = "<group>"; };
 		22CEBF0F1E580EB100967943 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
 		22CEBF101E580EB100967943 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
-		22CEBF151E58216C00967943 /* XSYLoveBeenShoppingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSYLoveBeenShoppingController.h; sourceTree = "<group>"; };
-		22CEBF161E58216C00967943 /* XSYLoveBeenShoppingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSYLoveBeenShoppingController.m; sourceTree = "<group>"; };
+		22CEBF151E58216C00967943 /* XSYLoveBeenMarketController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSYLoveBeenMarketController.h; sourceTree = "<group>"; };
+		22CEBF161E58216C00967943 /* XSYLoveBeenMarketController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSYLoveBeenMarketController.m; sourceTree = "<group>"; };
 		22CEBF181E5821E400967943 /* XSYLoveBeenMineController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSYLoveBeenMineController.h; sourceTree = "<group>"; };
 		22CEBF191E5821E400967943 /* XSYLoveBeenMineController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSYLoveBeenMineController.m; sourceTree = "<group>"; };
 		22CEBF211E583B1F00967943 /* XSYLoveBeenShopCarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSYLoveBeenShopCarController.h; sourceTree = "<group>"; };
 		22CEBF221E583B1F00967943 /* XSYLoveBeenShopCarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSYLoveBeenShopCarController.m; sourceTree = "<group>"; };
+		22EA4E5E1E5D5BB7009AF09B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22EA4E621E5D7E70009AF09B /* XSYLoveBeenMarketLeftCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSYLoveBeenMarketLeftCell.h; sourceTree = "<group>"; };
+		22EA4E631E5D7E70009AF09B /* XSYLoveBeenMarketLeftCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSYLoveBeenMarketLeftCell.m; sourceTree = "<group>"; };
+		22EA4E651E5D8F88009AF09B /* XSYLoveBeenMarketRightCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSYLoveBeenMarketRightCell.h; sourceTree = "<group>"; };
+		22EA4E661E5D8F88009AF09B /* XSYLoveBeenMarketRightCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSYLoveBeenMarketRightCell.m; sourceTree = "<group>"; };
 		6C7BCAACA329CB2764039A03 /* Pods-LoveBeen.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoveBeen.release.xcconfig"; path = "Pods/Target Support Files/Pods-LoveBeen/Pods-LoveBeen.release.xcconfig"; sourceTree = "<group>"; };
 		88724557FC4681AD8BCD7000 /* libPods-LoveBeen.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LoveBeen.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		889DEA2046FAB09F99BDA80C /* Pods-LoveBeen.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoveBeen.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LoveBeen/Pods-LoveBeen.debug.xcconfig"; sourceTree = "<group>"; };
@@ -194,6 +207,24 @@
 				221A9B111E5C246A00288F27 /* XSYLoveBeenQRControllerViewController.m */,
 			);
 			path = "QR(二维码)Controller";
+			sourceTree = "<group>";
+		};
+		221A9B151E5C691D00288F27 /* categories */ = {
+			isa = PBXGroup;
+			children = (
+				221A9B171E5C699800288F27 /* XSYLoveBeenCategoriesModel.h */,
+				221A9B181E5C699800288F27 /* XSYLoveBeenCategoriesModel.m */,
+			);
+			path = categories;
+			sourceTree = "<group>";
+		};
+		221A9B161E5C695100288F27 /* products */ = {
+			isa = PBXGroup;
+			children = (
+				221A9B1A1E5C6AD000288F27 /* XSYLoveBeenProductsModel.h */,
+				221A9B1B1E5C6AD000288F27 /* XSYLoveBeenProductsModel.m */,
+			);
+			path = products;
 			sourceTree = "<group>";
 		};
 		223209D91E5843A400D31713 /* NetworkingTools */ = {
@@ -353,8 +384,8 @@
 		22CEBE9D1E57D7C300967943 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				22EA4E5E1E5D5BB7009AF09B /* Info.plist */,
 				22CEBEA91E57D7C300967943 /* Assets.xcassets */,
-				22CEBEAE1E57D7C300967943 /* Info.plist */,
 				22CEBE9E1E57D7C300967943 /* main.m */,
 				22CEBECF1E57F20200967943 /* PrefixHeader.pch */,
 			);
@@ -520,8 +551,8 @@
 		22CEBEC41E57DED400967943 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				22CEBF151E58216C00967943 /* XSYLoveBeenShoppingController.h */,
-				22CEBF161E58216C00967943 /* XSYLoveBeenShoppingController.m */,
+				22CEBF151E58216C00967943 /* XSYLoveBeenMarketController.h */,
+				22CEBF161E58216C00967943 /* XSYLoveBeenMarketController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -529,6 +560,8 @@
 		22CEBEC51E57DED400967943 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				221A9B161E5C695100288F27 /* products */,
+				221A9B151E5C691D00288F27 /* categories */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -536,6 +569,8 @@
 		22CEBEC61E57DED400967943 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				22EA4E611E5D7D47009AF09B /* SecondPageRightCell */,
+				22EA4E601E5D7CFD009AF09B /* SecondPageLeftCell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -677,6 +712,24 @@
 			path = UIView;
 			sourceTree = "<group>";
 		};
+		22EA4E601E5D7CFD009AF09B /* SecondPageLeftCell */ = {
+			isa = PBXGroup;
+			children = (
+				22EA4E621E5D7E70009AF09B /* XSYLoveBeenMarketLeftCell.h */,
+				22EA4E631E5D7E70009AF09B /* XSYLoveBeenMarketLeftCell.m */,
+			);
+			path = SecondPageLeftCell;
+			sourceTree = "<group>";
+		};
+		22EA4E611E5D7D47009AF09B /* SecondPageRightCell */ = {
+			isa = PBXGroup;
+			children = (
+				22EA4E651E5D8F88009AF09B /* XSYLoveBeenMarketRightCell.h */,
+				22EA4E661E5D8F88009AF09B /* XSYLoveBeenMarketRightCell.m */,
+			);
+			path = SecondPageRightCell;
+			sourceTree = "<group>";
+		};
 		8975D6746BACFD3653796E59 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -757,6 +810,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22EA4E5F1E5D5BB7009AF09B /* Info.plist in Resources */,
 				22320A111E59F8D000D31713 /* XSYLoveBeenDetailPageHeaderView.xib in Resources */,
 				223209FE1E58B17B00D31713 /* XSYLoveBeenFirstPageTableBottomCell.xib in Resources */,
 				22CEBEAA1E57D7C300967943 /* Assets.xcassets in Resources */,
@@ -819,7 +873,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				22CEBEA21E57D7C300967943 /* AppDelegate.m in Sources */,
-				22CEBF171E58216C00967943 /* XSYLoveBeenShoppingController.m in Sources */,
+				22CEBF171E58216C00967943 /* XSYLoveBeenMarketController.m in Sources */,
 				221A9B0A1E5B16C500288F27 /* XSYLoveBeenMyButton.m in Sources */,
 				22CEBE9F1E57D7C300967943 /* main.m in Sources */,
 				22320A1C1E5AD25A00D31713 /* XSYLoveBeenMapController.m in Sources */,
@@ -827,16 +881,20 @@
 				223209F41E58996B00D31713 /* XSYLoveBeenFirstPageTopCell.m in Sources */,
 				22CEBF111E580EB100967943 /* UIView+Extension.m in Sources */,
 				22CEBF071E580A5A00967943 /* UILabel+CZAddition.m in Sources */,
+				22EA4E671E5D8F88009AF09B /* XSYLoveBeenMarketRightCell.m in Sources */,
 				22CEBF0D1E580A5A00967943 /* UILabel+Helper.m in Sources */,
 				22CEBF1A1E5821E400967943 /* XSYLoveBeenMineController.m in Sources */,
 				22CEBF001E580A5A00967943 /* NSAttributedString+CZAdditon.m in Sources */,
 				223209DC1E5843E500D31713 /* NetworkingTools.m in Sources */,
+				221A9B1C1E5C6AD000288F27 /* XSYLoveBeenProductsModel.m in Sources */,
 				223209ED1E5883A800D31713 /* XSYLoveBeenActivityAndIconModel.m in Sources */,
+				221A9B191E5C699800288F27 /* XSYLoveBeenCategoriesModel.m in Sources */,
 				22CEBF021E580A5A00967943 /* NSString+CZBase64.m in Sources */,
 				223209EA1E587B2300D31713 /* XSYLoveBeenFirstPageModel.m in Sources */,
 				22CEBF0B1E580A5A00967943 /* UIBarButtonItem+Extension.m in Sources */,
 				223209F81E58AB6000D31713 /* XSYLoveBeenFirstPageBottomShoppingModel.m in Sources */,
 				221A9B121E5C246A00288F27 /* XSYLoveBeenQRControllerViewController.m in Sources */,
+				22EA4E641E5D7E70009AF09B /* XSYLoveBeenMarketLeftCell.m in Sources */,
 				22CEBF011E580A5A00967943 /* NSObject+CZRuntime.m in Sources */,
 				223209F01E5883D100D31713 /* XSYLoveBeenFocusModel.m in Sources */,
 				22CEBED81E5809E700967943 /* XSYLoveBeenNavigationController.m in Sources */,
@@ -961,8 +1019,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = "";
 				GCC_PREFIX_HEADER = LoveBeen/PrefixHeader.pch;
-				INFOPLIST_FILE = LoveBeen/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/LoveBeen/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.DogeEggEgg.LoveBeen;
@@ -976,8 +1035,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = "";
 				GCC_PREFIX_HEADER = LoveBeen/PrefixHeader.pch;
-				INFOPLIST_FILE = LoveBeen/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/LoveBeen/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.DogeEggEgg.LoveBeen;

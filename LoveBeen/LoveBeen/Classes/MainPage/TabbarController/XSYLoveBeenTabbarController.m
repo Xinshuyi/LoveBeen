@@ -28,9 +28,9 @@
     // 3.创建tabBar的子控制器，设置item的图片 选中图片,title同时确定了两个主控制器的标题 这里的自控制器如果是collection控制器 一定要重写- (instancetype)initWithCollectionViewLayout:(UICollectionViewLayout *)layout 
     [self creatChildNavigationControllerWithClassName:@"XSYLoveBeenFirstController" title:@"首页" image:@"v2_home" selectedImage:@"v2_home_r"];
     
-    [self creatChildNavigationControllerWithClassName:@"XSYLoveBeenShoppingController" title:@"闪电超市" image:@"v2_order" selectedImage:@"v2_order_r"];
+    [self creatChildNavigationControllerWithClassName:@"XSYLoveBeenMarketController" title:@"闪电超市" image:@"v2_order" selectedImage:@"v2_order_r"];
     
-    [self creatChildNavigationControllerWithClassName:@"XSYLoveBeenShoppingController" title:@"购物车" image:@"shopCart" selectedImage:@"shopCart_r"];
+    [self creatChildNavigationControllerWithClassName:@"XSYLoveBeenShopCarController" title:@"购物车" image:@"shopCart" selectedImage:@"shopCart_r"];
     
     [self creatChildNavigationControllerWithClassName:@"XSYLoveBeenMineController" title:@"我" image:@"v2_my" selectedImage:@"v2_my_r"];
 

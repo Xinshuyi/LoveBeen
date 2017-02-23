@@ -17,4 +17,10 @@ typedef void(^FailureBlock)(NSError *error);
 
 /**首页下半部分的数据*/
 + (void)getFirstPageBottomWithSuccessBlock:(SuccessBlock)successBlock FailureBlock:(FailureBlock)failureBlock;
+
+
+/**
+ 第二页闪电超市数据
+ */
++ (void)getMarketPageWithSuccessBlock:(SuccessBlock)successBlock FailureBlock:(FailureBlock)failureBlock;
 @end
