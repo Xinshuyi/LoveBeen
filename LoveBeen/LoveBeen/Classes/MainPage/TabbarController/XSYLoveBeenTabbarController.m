@@ -62,6 +62,8 @@
 }
 - (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController{
     if ([viewController.tabBarItem.title isEqualToString:@"购物车"]) {
+        // 购物车界面发送通知给其他三个界面 准备modal
+        [[NSNotificationCenter defaultCenter] postNotificationName:kShoppingCarControllerModal object:nil userInfo:nil];
         return NO;
     }
     return YES;

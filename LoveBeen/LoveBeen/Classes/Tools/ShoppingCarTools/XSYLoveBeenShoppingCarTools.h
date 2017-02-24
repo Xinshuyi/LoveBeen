@@ -27,4 +27,10 @@
 获得所有商品的总数
  */
 - (NSUInteger)getTotalNumberOfShoppings;
+
+
+/**
+ 获得商品总价
+ */
+- (float)totalPriceOfShoppings;
 @end

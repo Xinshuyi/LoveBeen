@@ -18,6 +18,8 @@
 #import <MJRefresh.h>
 #import "XSYRefreshHeader.h"
 #import "XSYLoveBeenShoppingCarTools.h"
+#import "XSYLoveBeenShopCarController.h"
+#import "XSYLoveBeenShopingCarNavigationController.h"
 
 static NSString *leftTableViewCellID = @"leftTableViewCellID";
 static NSString *rightTableViewCellID = @"rightTableViewCellID";
@@ -27,7 +29,6 @@ static NSString *rightTableViewCellID = @"rightTableViewCellID";
 @property (nonatomic, strong) UITableView *leftTableView;
 @property (nonatomic, strong) UITableView *rightTableView;
 @property (nonatomic, strong) NSIndexPath *leftIndexPath;
-
 @end
 
 @implementation XSYLoveBeenMarketController
@@ -43,6 +44,25 @@ static NSString *rightTableViewCellID = @"rightTableViewCellID";
 - (void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
     [SVProgressHUD dismiss];
+    // 移除通知
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:kShoppingCarControllerModal object:nil];
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self addNotification];
+    [self.rightTableView reloadData];
+    [self showShoppingCarTotalNumber];
+}
+
+- (void)addNotification{
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(modalShoppingViewController) name:kShoppingCarControllerModal object:nil];
+}
+
+- (void)modalShoppingViewController{
+    XSYLoveBeenShopCarController *shopController = [[XSYLoveBeenShopCarController alloc] init];
+    XSYLoveBeenShopingCarNavigationController *shopCarController = [[XSYLoveBeenShopingCarNavigationController alloc] initWithRootViewController:shopController];
+    [self presentViewController:shopCarController animated:YES completion:nil];
 }
 
 - (void)addConstaints{

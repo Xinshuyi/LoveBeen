@@ -54,4 +54,12 @@ static XSYLoveBeenShoppingCarTools *_shoppingCarTools;
     }
     return totalNum;
 }
+
+- (float)totalPriceOfShoppings{
+    float totalPrice;
+    for (XSYLoveBeenFirstPageBottomShoppingModel * model in self.shoppingModels) {
+        totalPrice += model.partner_price.floatValue * model.numOfShopsInShoppingCar;
+    }
+    return totalPrice;
+}
 @end

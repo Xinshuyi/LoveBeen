@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface XSYLoveBeenShopCarController : UIViewController
+@interface XSYLoveBeenShopCarController : UITableViewController
 
 @end

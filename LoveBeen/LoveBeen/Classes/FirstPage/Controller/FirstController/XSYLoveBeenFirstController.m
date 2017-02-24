@@ -25,6 +25,8 @@
 #import "XSYLoveBeenMyButton.h"
 #import "XSYLoveBeenShoppingCarTools.h"
 #import "XSYLoveBeenQRControllerViewController.h"
+#import "XSYLoveBeenShopCarController.h"
+#import "XSYLoveBeenShopingCarNavigationController.h"
 
 static NSString *firstPageTopCellID = @"firstPageTopCellID";
 static NSString *firstPageBottomCellID = @"firstPageBottomCellID";
@@ -46,6 +48,28 @@ static NSString *firstPageBottomCellID = @"firstPageBottomCellID";
     [self setHeaderAndFooter];
     [self setTitleView];
     [self setLeftItemAndRightItem];
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self addNotification];
+    [self.tableView reloadData];
+    [self setShoppingCarBadge];
+}
+
+- (void)addNotification{
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(modalShoppingViewController) name:kShoppingCarControllerModal object:nil];
+}
+
+- (void)modalShoppingViewController{
+    XSYLoveBeenShopCarController *shopController = [[XSYLoveBeenShopCarController alloc] init];
+    XSYLoveBeenShopingCarNavigationController *shopCarController = [[XSYLoveBeenShopingCarNavigationController alloc] initWithRootViewController:shopController];
+    [self presentViewController:shopCarController animated:YES completion:nil];
+}
+
+- (void)viewWillDisappear:(BOOL)animated{
+    // 移除通知
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:kShoppingCarControllerModal object:nil];
 }
 
 - (void)setTitleView{

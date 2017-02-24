@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Tte-iK-RNL">
+            <rect key="frame" x="0.0" y="0.0" width="583" height="115"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="v2_shoprail" translatesAutoresizingMaskIntoConstraints="NO" id="5vi-Te-Ohn">
+                    <rect key="frame" x="0.0" y="10" width="583" height="5"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="5" id="NWx-ht-SV8"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="v2_shoprail" translatesAutoresizingMaskIntoConstraints="NO" id="ZOr-ID-fl8">
+                    <rect key="frame" x="0.0" y="100" width="583" height="5"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="5" id="tTr-Ii-Bpx"/>
+                    </constraints>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BJg-Pr-hLe">
+                    <rect key="frame" x="0.0" y="15" width="583" height="85"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="收货人          tb_461416254  先生" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lbx-xc-0LC">
+                            <rect key="frame" x="20" y="1" width="182.5" height="14.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="电话            18815283280" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j4F-04-YHJ">
+                            <rect key="frame" x="20" y="35.5" width="144" height="15"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="收货地址      狗子省狗子市狗子街道狗零狗号狗室" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eKC-yS-AgF">
+                            <rect key="frame" x="20" y="70.5" width="265.5" height="15"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_go" translatesAutoresizingMaskIntoConstraints="NO" id="xNb-hc-oaL">
+                            <rect key="frame" x="563" y="35.5" width="10" height="15"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="10" id="Pld-Ke-oYt"/>
+                                <constraint firstAttribute="height" constant="15" id="ztg-A0-2De"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="eKC-yS-AgF" firstAttribute="top" secondItem="j4F-04-YHJ" secondAttribute="bottom" constant="20" id="41g-lO-JZv"/>
+                        <constraint firstItem="j4F-04-YHJ" firstAttribute="leading" secondItem="lbx-xc-0LC" secondAttribute="leading" id="5JJ-qu-gfe"/>
+                        <constraint firstItem="xNb-hc-oaL" firstAttribute="centerY" secondItem="j4F-04-YHJ" secondAttribute="centerY" id="GCZ-rh-7sI"/>
+                        <constraint firstItem="j4F-04-YHJ" firstAttribute="centerY" secondItem="BJg-Pr-hLe" secondAttribute="centerY" id="Q2M-Zq-trL"/>
+                        <constraint firstItem="eKC-yS-AgF" firstAttribute="leading" secondItem="j4F-04-YHJ" secondAttribute="leading" id="RQV-Sc-1mB"/>
+                        <constraint firstAttribute="trailing" secondItem="xNb-hc-oaL" secondAttribute="trailing" constant="10" id="d5K-p7-NqX"/>
+                        <constraint firstItem="j4F-04-YHJ" firstAttribute="top" secondItem="lbx-xc-0LC" secondAttribute="bottom" constant="20" id="hxt-Fq-6e7"/>
+                        <constraint firstItem="j4F-04-YHJ" firstAttribute="leading" secondItem="BJg-Pr-hLe" secondAttribute="leading" constant="20" id="kAp-pd-bK7"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.93656378984451294" green="0.9386104941368103" blue="0.95605641603469849" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="ZOr-ID-fl8" secondAttribute="bottom" constant="10" id="2b7-ag-9Lb"/>
+                <constraint firstAttribute="trailing" secondItem="ZOr-ID-fl8" secondAttribute="trailing" id="7vF-er-muq"/>
+                <constraint firstItem="BJg-Pr-hLe" firstAttribute="leading" secondItem="Tte-iK-RNL" secondAttribute="leading" id="GV2-In-Goj"/>
+                <constraint firstItem="5vi-Te-Ohn" firstAttribute="top" secondItem="Tte-iK-RNL" secondAttribute="top" constant="10" id="Mn1-8k-dOE"/>
+                <constraint firstItem="BJg-Pr-hLe" firstAttribute="top" secondItem="5vi-Te-Ohn" secondAttribute="bottom" id="W5u-BW-sd4"/>
+                <constraint firstItem="ZOr-ID-fl8" firstAttribute="top" secondItem="BJg-Pr-hLe" secondAttribute="bottom" id="WZc-tB-Fhd"/>
+                <constraint firstAttribute="trailing" secondItem="5vi-Te-Ohn" secondAttribute="trailing" id="anF-O9-cFf"/>
+                <constraint firstItem="5vi-Te-Ohn" firstAttribute="leading" secondItem="Tte-iK-RNL" secondAttribute="leading" id="awK-Wv-SAY"/>
+                <constraint firstAttribute="trailing" secondItem="BJg-Pr-hLe" secondAttribute="trailing" id="n3S-aA-JTe"/>
+                <constraint firstItem="ZOr-ID-fl8" firstAttribute="leading" secondItem="Tte-iK-RNL" secondAttribute="leading" id="rje-rT-8Kg"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="202.5" y="-35.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon_go" width="5" height="10"/>
+        <image name="v2_shoprail" width="320" height="2"/>
+    </resources>
+</document>
