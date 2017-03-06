@@ -20,6 +20,8 @@
         tools.responseSerializer.acceptableContentTypes = [tools.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
         tools.responseSerializer.acceptableContentTypes = [tools.responseSerializer.acceptableContentTypes setByAddingObject:@"text/plain"];
         tools.requestSerializer = [AFJSONRequestSerializer serializer];
+        // 设置超时时间
+        tools.requestSerializer.timeoutInterval = 10;
     });
     return tools;
 }

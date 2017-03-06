@@ -20,9 +20,18 @@ typedef void(^CompleteBlock)(id response, NSError *error);
 
 + (instancetype)shared;
 
-// 封装网络请求的方法
-                 // get还是post
-- (void) request:(HTTPMethod)method urlString:(NSString *)urlString parameters:(id)parameters completeBlock:(CompleteBlock)completeBlock;
+/**
+ 封装网络请求的方法
+
+ @param method "get" 或 "post"
+ @param urlString 网络请求url
+ @param parameters 参数
+ @param completeBlock 完成的回调
+ */
+- (void)request:(HTTPMethod)method
+      urlString:(NSString *)urlString
+     parameters:(id)parameters
+  completeBlock:(CompleteBlock)completeBlock;
 
 // 具体的url还可以继续封装方法 
 @end
