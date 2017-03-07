@@ -10,6 +10,7 @@
 #import "XSYLoveBeenShopingCarNavigationController.h"
 #import "XSYLoveBeenShopCarController.h"
 #import "XSYLoveBeenMinePageTopView.h"
+#import "XSYLoveBeenMinePageHeaderView.h"
 #import <Masonry.h>
 
 static NSString *minePageCellID = @"minePageCellID";
@@ -38,6 +39,12 @@ static NSString *minePageCellID = @"minePageCellID";
     [self.topView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.leading.trailing.equalTo(self.view);
         make.height.equalTo(self.view).multipliedBy(0.23);
+    }];
+    
+    [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.leading.trailing.equalTo(self.view);
+        make.top.equalTo(self.topView.mas_bottom);
+        make.bottom.equalTo(self.view);
     }];
 }
 
@@ -96,6 +103,8 @@ static NSString *minePageCellID = @"minePageCellID";
         _tableView.delegate = self;
         _tableView.dataSource = self;
         [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:minePageCellID];
+        // headerView
+        self.tableView.tableHeaderView = [[XSYLoveBeenMinePageHeaderView alloc] initWithFrame:CGRectMake(0, 0, 0, ScreenHeight * 0.1)];
     }
     return _tableView;
 }

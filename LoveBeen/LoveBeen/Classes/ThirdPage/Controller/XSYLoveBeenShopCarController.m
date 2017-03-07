@@ -17,8 +17,10 @@
 
 static NSString *shoppingCarCell = @"shoppingCarCell";
 
-@interface XSYLoveBeenShopCarController ()<XSYLoveBeenShoppingCarCellDelgate>
+@interface XSYLoveBeenShopCarController ()<XSYLoveBeenShoppingCarCellDelgate, UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, strong) XSYLoveBeenShoppingCarOriginView *originView;
+@property (nonatomic, strong) UITableView *tableView;
+
 @property (nonatomic, strong) XSYLoveBeenShoppingCarTools *shoppingCarTools;
 @property (nonatomic, assign) BOOL isOriginView;
 @property (nonatomic, strong) XSYLoveBeenShoppingCarToolBar *toolBar;
@@ -43,21 +45,27 @@ static NSString *shoppingCarCell = @"shoppingCarCell";
     [super viewDidLoad];
     [self basicSetting];
     if (!self.isOriginView) {
-        [self initialTableView];
+        [self.view addSubview:self.tableView];
+        [self.view addSubview:self.toolBar];
+        [self addConstraints];
     }
 }
 - (void)clickOkButton:(UIButton *)okButton{
     
 }
 
-- (void)initialTableView{
-    UINib *nib = [UINib nibWithNibName:@"XSYLoveBeenShoppingCarCell" bundle:[NSBundle mainBundle]];
-    [self.tableView registerNib:nib forCellReuseIdentifier:shoppingCarCell];
-    self.tableView.tableHeaderView = [[[NSBundle mainBundle] loadNibNamed:@"ShoppingCarTableHeaderView" owner:nil options:nil] lastObject];
-    [self.tableView addSubview:self.toolBar];
-    self.toolBar.okButtonTarget = self;
-    self.toolBar.totalPriceLabel.text = [NSString stringWithFormat:@"￥%.1f",[self.shoppingCarTools totalPriceOfShoppings]];
-    self.tableView.tableFooterView = [[UIView alloc] init];
+- (void)addConstraints{
+    [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.leading.trailing.equalTo(self.view);
+        make.top.equalTo(self.mas_topLayoutGuideBottom);
+        make.bottom.equalTo(self.view);
+    }];
+    
+    [self.toolBar mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.leading.trailing.bottom.equalTo(self.view);
+        make.width.equalTo(self.view);
+        make.height.mas_equalTo(45);
+    }];
 }
 
 - (void)basicSetting{
@@ -108,6 +116,19 @@ static NSString *shoppingCarCell = @"shoppingCarCell";
     return _originView;
 }
 
+- (UITableView *)tableView{
+    if (_tableView == nil) {
+        _tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStyleGrouped];
+        UINib *nib = [UINib nibWithNibName:@"XSYLoveBeenShoppingCarCell" bundle:[NSBundle mainBundle]];
+        [_tableView registerNib:nib forCellReuseIdentifier:shoppingCarCell];
+        _tableView.tableHeaderView = [[[NSBundle mainBundle] loadNibNamed:@"ShoppingCarTableHeaderView" owner:nil options:nil] lastObject];
+        _tableView.delegate = self;
+        _tableView.dataSource = self;
+        _tableView.tableFooterView = [[UIView alloc] init];
+    }
+    return _tableView;
+}
+
 - (XSYLoveBeenShoppingCarTools *)shoppingCarTools{
     if (_shoppingCarTools == nil) {
         _shoppingCarTools = [XSYLoveBeenShoppingCarTools shared];
@@ -117,7 +138,9 @@ static NSString *shoppingCarCell = @"shoppingCarCell";
 
 - (XSYLoveBeenShoppingCarToolBar *)toolBar{
     if (_toolBar == nil) {
-        _toolBar = [[XSYLoveBeenShoppingCarToolBar alloc] initWithFrame:CGRectMake(0, 0.9 * ScreenHeight - 64, ScreenWidth, 0.1 * ScreenHeight)];
+        _toolBar = [[XSYLoveBeenShoppingCarToolBar alloc] init];
+        _toolBar.okButtonTarget = self;
+        _toolBar.totalPriceLabel.text = [NSString stringWithFormat:@"￥%.1f",[self.shoppingCarTools totalPriceOfShoppings]];
     }
     return _toolBar;
 }
