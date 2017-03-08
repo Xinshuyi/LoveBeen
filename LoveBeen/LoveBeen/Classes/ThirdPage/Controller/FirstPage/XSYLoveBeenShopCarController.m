@@ -99,7 +99,15 @@ static NSString *shoppingCarCell = @"shoppingCarCell";
 }
 
 - (void)shoppingCarCell:(XSYLoveBeenShoppingCarCell *)shoppingCarCell didClickDecreaseButtonOrIncreaseIsIncrease:(BOOL)isIncrease shoppingModel:(XSYLoveBeenFirstPageBottomShoppingModel *)shoppingModel{
-    self.toolBar.totalPriceLabel.text = [NSString stringWithFormat:@"%f",[self.shoppingCarTools totalPriceOfShoppings]];
+    if (isIncrease) {
+        [self.shoppingCarTools addShoppingModel:shoppingModel];
+    }else{
+        [self.shoppingCarTools deleteShoppingModel:shoppingModel];
+    }
+    self.toolBar.totalPriceLabel.text = [NSString stringWithFormat:@"%.2f",[self.shoppingCarTools totalPriceOfShoppings]];
+    if (shoppingModel.numOfShopsInShoppingCar == 0) {
+        [self.tableView reloadData];
+    }
 }
 
 #pragma mark - lazy -
@@ -140,7 +148,7 @@ static NSString *shoppingCarCell = @"shoppingCarCell";
     if (_toolBar == nil) {
         _toolBar = [[XSYLoveBeenShoppingCarToolBar alloc] init];
         _toolBar.okButtonTarget = self;
-        _toolBar.totalPriceLabel.text = [NSString stringWithFormat:@"￥%.1f",[self.shoppingCarTools totalPriceOfShoppings]];
+        _toolBar.totalPriceLabel.text = [NSString stringWithFormat:@"￥%.2f",[self.shoppingCarTools totalPriceOfShoppings]];
     }
     return _toolBar;
 }

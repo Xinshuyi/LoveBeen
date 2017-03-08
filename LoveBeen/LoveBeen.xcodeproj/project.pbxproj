@@ -33,7 +33,20 @@
 		22320A141E5AADDD00D31713 /* XSYLoveBeenFirstPageDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22320A131E5AADDD00D31713 /* XSYLoveBeenFirstPageDetailController.m */; };
 		22320A181E5AC68700D31713 /* XSYLoveBeenDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 22320A171E5AC68700D31713 /* XSYLoveBeenDetailCell.m */; };
 		22320A1C1E5AD25A00D31713 /* XSYLoveBeenMapController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22320A1B1E5AD25A00D31713 /* XSYLoveBeenMapController.m */; };
-		22ACCD2B1E5EF55600614CFC /* XSYLoveBeenShopingCarNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22ACCD2A1E5EF55600614CFC /* XSYLoveBeenShopingCarNavigationController.m */; };
+		2247F42A1E6FDA38007BB4A8 /* XSYLoveBeenShopingCarNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2247F4291E6FDA38007BB4A8 /* XSYLoveBeenShopingCarNavigationController.m */; };
+		2247F42E1E6FDA7F007BB4A8 /* XSYLoveBeenShopCarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2247F42D1E6FDA7F007BB4A8 /* XSYLoveBeenShopCarController.m */; };
+		2247F4321E6FDDD1007BB4A8 /* XSYLoveBeenMineController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2247F4311E6FDDD1007BB4A8 /* XSYLoveBeenMineController.m */; };
+		2247F43F1E6FE66F007BB4A8 /* HQCommonGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 2247F4361E6FE66F007BB4A8 /* HQCommonGroup.m */; };
+		2247F4401E6FE66F007BB4A8 /* HQCommonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2247F4381E6FE66F007BB4A8 /* HQCommonItem.m */; };
+		2247F4411E6FE66F007BB4A8 /* HQCommonItemArrowItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2247F43A1E6FE66F007BB4A8 /* HQCommonItemArrowItem.m */; };
+		2247F4421E6FE66F007BB4A8 /* HQCommonItemLabelItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2247F43C1E6FE66F007BB4A8 /* HQCommonItemLabelItem.m */; };
+		2247F4431E6FE66F007BB4A8 /* HQCommonItemSwitchItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2247F43E1E6FE66F007BB4A8 /* HQCommonItemSwitchItem.m */; };
+		2247F4471E6FE6AB007BB4A8 /* HQCommonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2247F4461E6FE6AB007BB4A8 /* HQCommonCell.m */; };
+		2247F44A1E6FEBD2007BB4A8 /* HQCommonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2247F4491E6FEBD2007BB4A8 /* HQCommonViewController.m */; };
+		2247F4511E6FED32007BB4A8 /* XSYLoveBeenViewMinePageDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2247F4501E6FED32007BB4A8 /* XSYLoveBeenViewMinePageDetailController.m */; };
+		2247F4581E6FF1DB007BB4A8 /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 2247F4571E6FF1DB007BB4A8 /* UIImage+Extension.m */; };
+		2247F45F1E6FF2B8007BB4A8 /* HQConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 2247F45E1E6FF2B8007BB4A8 /* HQConst.m */; };
+		2247F4631E6FF3D7007BB4A8 /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 2247F4621E6FF3D7007BB4A8 /* NSString+Extension.m */; };
 		22ACCD2D1E5EF61E00614CFC /* XSYLoveBeenNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22ACCD2C1E5EF61E00614CFC /* XSYLoveBeenNavigationController.m */; };
 		22ACCD311E5F078500614CFC /* XSYLoveBeenShoppingCarOriginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22ACCD301E5F078500614CFC /* XSYLoveBeenShoppingCarOriginView.m */; };
 		22ACCD371E5F381400614CFC /* ShoppingCarTableHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22ACCD361E5F381400614CFC /* ShoppingCarTableHeaderView.xib */; };
@@ -63,8 +76,6 @@
 		22CEBF0D1E580A5A00967943 /* UILabel+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CEBEFE1E580A5A00967943 /* UILabel+Helper.m */; };
 		22CEBF111E580EB100967943 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CEBF101E580EB100967943 /* UIView+Extension.m */; };
 		22CEBF171E58216C00967943 /* XSYLoveBeenMarketController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CEBF161E58216C00967943 /* XSYLoveBeenMarketController.m */; };
-		22CEBF1A1E5821E400967943 /* XSYLoveBeenMineController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CEBF191E5821E400967943 /* XSYLoveBeenMineController.m */; };
-		22CEBF231E583B1F00967943 /* XSYLoveBeenShopCarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CEBF221E583B1F00967943 /* XSYLoveBeenShopCarController.m */; };
 		22EA4E5F1E5D5BB7009AF09B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 22EA4E5E1E5D5BB7009AF09B /* Info.plist */; };
 		22EA4E641E5D7E70009AF09B /* XSYLoveBeenMarketLeftCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 22EA4E631E5D7E70009AF09B /* XSYLoveBeenMarketLeftCell.m */; };
 		22EA4E671E5D8F88009AF09B /* XSYLoveBeenMarketRightCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 22EA4E661E5D8F88009AF09B /* XSYLoveBeenMarketRightCell.m */; };
@@ -121,8 +132,34 @@
 		22320A171E5AC68700D31713 /* XSYLoveBeenDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSYLoveBeenDetailCell.m; sourceTree = "<group>"; };
 		22320A1A1E5AD25A00D31713 /* XSYLoveBeenMapController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSYLoveBeenMapController.h; sourceTree = "<group>"; };
 		22320A1B1E5AD25A00D31713 /* XSYLoveBeenMapController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSYLoveBeenMapController.m; sourceTree = "<group>"; };
-		22ACCD291E5EF55600614CFC /* XSYLoveBeenShopingCarNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSYLoveBeenShopingCarNavigationController.h; sourceTree = "<group>"; };
-		22ACCD2A1E5EF55600614CFC /* XSYLoveBeenShopingCarNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSYLoveBeenShopingCarNavigationController.m; sourceTree = "<group>"; };
+		2247F4281E6FDA38007BB4A8 /* XSYLoveBeenShopingCarNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSYLoveBeenShopingCarNavigationController.h; sourceTree = "<group>"; };
+		2247F4291E6FDA38007BB4A8 /* XSYLoveBeenShopingCarNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSYLoveBeenShopingCarNavigationController.m; sourceTree = "<group>"; };
+		2247F42C1E6FDA7F007BB4A8 /* XSYLoveBeenShopCarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSYLoveBeenShopCarController.h; sourceTree = "<group>"; };
+		2247F42D1E6FDA7F007BB4A8 /* XSYLoveBeenShopCarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSYLoveBeenShopCarController.m; sourceTree = "<group>"; };
+		2247F4301E6FDDD1007BB4A8 /* XSYLoveBeenMineController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSYLoveBeenMineController.h; sourceTree = "<group>"; };
+		2247F4311E6FDDD1007BB4A8 /* XSYLoveBeenMineController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSYLoveBeenMineController.m; sourceTree = "<group>"; };
+		2247F4351E6FE66F007BB4A8 /* HQCommonGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQCommonGroup.h; sourceTree = "<group>"; };
+		2247F4361E6FE66F007BB4A8 /* HQCommonGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQCommonGroup.m; sourceTree = "<group>"; };
+		2247F4371E6FE66F007BB4A8 /* HQCommonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQCommonItem.h; sourceTree = "<group>"; };
+		2247F4381E6FE66F007BB4A8 /* HQCommonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQCommonItem.m; sourceTree = "<group>"; };
+		2247F4391E6FE66F007BB4A8 /* HQCommonItemArrowItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQCommonItemArrowItem.h; sourceTree = "<group>"; };
+		2247F43A1E6FE66F007BB4A8 /* HQCommonItemArrowItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQCommonItemArrowItem.m; sourceTree = "<group>"; };
+		2247F43B1E6FE66F007BB4A8 /* HQCommonItemLabelItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQCommonItemLabelItem.h; sourceTree = "<group>"; };
+		2247F43C1E6FE66F007BB4A8 /* HQCommonItemLabelItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQCommonItemLabelItem.m; sourceTree = "<group>"; };
+		2247F43D1E6FE66F007BB4A8 /* HQCommonItemSwitchItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQCommonItemSwitchItem.h; sourceTree = "<group>"; };
+		2247F43E1E6FE66F007BB4A8 /* HQCommonItemSwitchItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQCommonItemSwitchItem.m; sourceTree = "<group>"; };
+		2247F4451E6FE6AB007BB4A8 /* HQCommonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQCommonCell.h; sourceTree = "<group>"; };
+		2247F4461E6FE6AB007BB4A8 /* HQCommonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQCommonCell.m; sourceTree = "<group>"; };
+		2247F4481E6FEBD2007BB4A8 /* HQCommonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQCommonViewController.h; sourceTree = "<group>"; };
+		2247F4491E6FEBD2007BB4A8 /* HQCommonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQCommonViewController.m; sourceTree = "<group>"; };
+		2247F44F1E6FED32007BB4A8 /* XSYLoveBeenViewMinePageDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSYLoveBeenViewMinePageDetailController.h; sourceTree = "<group>"; };
+		2247F4501E6FED32007BB4A8 /* XSYLoveBeenViewMinePageDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSYLoveBeenViewMinePageDetailController.m; sourceTree = "<group>"; };
+		2247F4561E6FF1DB007BB4A8 /* UIImage+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extension.h"; sourceTree = "<group>"; };
+		2247F4571E6FF1DB007BB4A8 /* UIImage+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extension.m"; sourceTree = "<group>"; };
+		2247F45D1E6FF2B8007BB4A8 /* HQConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQConst.h; sourceTree = "<group>"; };
+		2247F45E1E6FF2B8007BB4A8 /* HQConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQConst.m; sourceTree = "<group>"; };
+		2247F4611E6FF3D7007BB4A8 /* NSString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
+		2247F4621E6FF3D7007BB4A8 /* NSString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
 		22ACCD2C1E5EF61E00614CFC /* XSYLoveBeenNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSYLoveBeenNavigationController.m; sourceTree = "<group>"; };
 		22ACCD2F1E5F078500614CFC /* XSYLoveBeenShoppingCarOriginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSYLoveBeenShoppingCarOriginView.h; sourceTree = "<group>"; };
 		22ACCD301E5F078500614CFC /* XSYLoveBeenShoppingCarOriginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSYLoveBeenShoppingCarOriginView.m; sourceTree = "<group>"; };
@@ -179,10 +216,6 @@
 		22CEBF101E580EB100967943 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		22CEBF151E58216C00967943 /* XSYLoveBeenMarketController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSYLoveBeenMarketController.h; sourceTree = "<group>"; };
 		22CEBF161E58216C00967943 /* XSYLoveBeenMarketController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSYLoveBeenMarketController.m; sourceTree = "<group>"; };
-		22CEBF181E5821E400967943 /* XSYLoveBeenMineController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSYLoveBeenMineController.h; sourceTree = "<group>"; };
-		22CEBF191E5821E400967943 /* XSYLoveBeenMineController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSYLoveBeenMineController.m; sourceTree = "<group>"; };
-		22CEBF211E583B1F00967943 /* XSYLoveBeenShopCarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSYLoveBeenShopCarController.h; sourceTree = "<group>"; };
-		22CEBF221E583B1F00967943 /* XSYLoveBeenShopCarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSYLoveBeenShopCarController.m; sourceTree = "<group>"; };
 		22EA4E5E1E5D5BB7009AF09B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22EA4E621E5D7E70009AF09B /* XSYLoveBeenMarketLeftCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSYLoveBeenMarketLeftCell.h; sourceTree = "<group>"; };
 		22EA4E631E5D7E70009AF09B /* XSYLoveBeenMarketLeftCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSYLoveBeenMarketLeftCell.m; sourceTree = "<group>"; };
@@ -394,6 +427,105 @@
 			path = MapController;
 			sourceTree = "<group>";
 		};
+		2247F4271E6FD988007BB4A8 /* NavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				2247F4281E6FDA38007BB4A8 /* XSYLoveBeenShopingCarNavigationController.h */,
+				2247F4291E6FDA38007BB4A8 /* XSYLoveBeenShopingCarNavigationController.m */,
+			);
+			path = NavigationController;
+			sourceTree = "<group>";
+		};
+		2247F42B1E6FDA3E007BB4A8 /* FirstPage */ = {
+			isa = PBXGroup;
+			children = (
+				2247F42C1E6FDA7F007BB4A8 /* XSYLoveBeenShopCarController.h */,
+				2247F42D1E6FDA7F007BB4A8 /* XSYLoveBeenShopCarController.m */,
+			);
+			path = FirstPage;
+			sourceTree = "<group>";
+		};
+		2247F42F1E6FDD93007BB4A8 /* FirstPage */ = {
+			isa = PBXGroup;
+			children = (
+				2247F4301E6FDDD1007BB4A8 /* XSYLoveBeenMineController.h */,
+				2247F4311E6FDDD1007BB4A8 /* XSYLoveBeenMineController.m */,
+			);
+			path = FirstPage;
+			sourceTree = "<group>";
+		};
+		2247F4331E6FE500007BB4A8 /* CommonController */ = {
+			isa = PBXGroup;
+			children = (
+				2247F4481E6FEBD2007BB4A8 /* HQCommonViewController.h */,
+				2247F4491E6FEBD2007BB4A8 /* HQCommonViewController.m */,
+			);
+			path = CommonController;
+			sourceTree = "<group>";
+		};
+		2247F4341E6FE647007BB4A8 /* CommonControllerModel */ = {
+			isa = PBXGroup;
+			children = (
+				2247F4351E6FE66F007BB4A8 /* HQCommonGroup.h */,
+				2247F4361E6FE66F007BB4A8 /* HQCommonGroup.m */,
+				2247F4371E6FE66F007BB4A8 /* HQCommonItem.h */,
+				2247F4381E6FE66F007BB4A8 /* HQCommonItem.m */,
+				2247F4391E6FE66F007BB4A8 /* HQCommonItemArrowItem.h */,
+				2247F43A1E6FE66F007BB4A8 /* HQCommonItemArrowItem.m */,
+				2247F43B1E6FE66F007BB4A8 /* HQCommonItemLabelItem.h */,
+				2247F43C1E6FE66F007BB4A8 /* HQCommonItemLabelItem.m */,
+				2247F43D1E6FE66F007BB4A8 /* HQCommonItemSwitchItem.h */,
+				2247F43E1E6FE66F007BB4A8 /* HQCommonItemSwitchItem.m */,
+			);
+			path = CommonControllerModel;
+			sourceTree = "<group>";
+		};
+		2247F4441E6FE689007BB4A8 /* CommonControllerCell */ = {
+			isa = PBXGroup;
+			children = (
+				2247F4451E6FE6AB007BB4A8 /* HQCommonCell.h */,
+				2247F4461E6FE6AB007BB4A8 /* HQCommonCell.m */,
+			);
+			path = CommonControllerCell;
+			sourceTree = "<group>";
+		};
+		2247F44E1E6FECEF007BB4A8 /* DetailController */ = {
+			isa = PBXGroup;
+			children = (
+				2247F44F1E6FED32007BB4A8 /* XSYLoveBeenViewMinePageDetailController.h */,
+				2247F4501E6FED32007BB4A8 /* XSYLoveBeenViewMinePageDetailController.m */,
+			);
+			name = DetailController;
+			path = Controller/DetailController;
+			sourceTree = "<group>";
+		};
+		2247F4551E6FF1AF007BB4A8 /* UIImage */ = {
+			isa = PBXGroup;
+			children = (
+				2247F4561E6FF1DB007BB4A8 /* UIImage+Extension.h */,
+				2247F4571E6FF1DB007BB4A8 /* UIImage+Extension.m */,
+			);
+			path = UIImage;
+			sourceTree = "<group>";
+		};
+		2247F45C1E6FF289007BB4A8 /* Const */ = {
+			isa = PBXGroup;
+			children = (
+				2247F45D1E6FF2B8007BB4A8 /* HQConst.h */,
+				2247F45E1E6FF2B8007BB4A8 /* HQConst.m */,
+			);
+			path = Const;
+			sourceTree = "<group>";
+		};
+		2247F4601E6FF3B3007BB4A8 /* NSString */ = {
+			isa = PBXGroup;
+			children = (
+				2247F4611E6FF3D7007BB4A8 /* NSString+Extension.h */,
+				2247F4621E6FF3D7007BB4A8 /* NSString+Extension.m */,
+			);
+			path = NSString;
+			sourceTree = "<group>";
+		};
 		22ACCD2E1E5F074300614CFC /* OriginView */ = {
 			isa = PBXGroup;
 			children = (
@@ -496,6 +628,8 @@
 		22CEBEB51E57DED400967943 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				2247F4601E6FF3B3007BB4A8 /* NSString */,
+				2247F4551E6FF1AF007BB4A8 /* UIImage */,
 				22CEBF0E1E580EB100967943 /* UIView */,
 				22CEBEDC1E580A5A00967943 /* Additions */,
 				22CEBEF61E580A5A00967943 /* UIBarButtonItem */,
@@ -552,6 +686,7 @@
 		22CEBEBA1E57DED400967943 /* FourthPage */ = {
 			isa = PBXGroup;
 			children = (
+				2247F44E1E6FECEF007BB4A8 /* DetailController */,
 				22CEBEBB1E57DED400967943 /* Controller */,
 				22CEBEBC1E57DED400967943 /* Model */,
 				22CEBEBD1E57DED400967943 /* View */,
@@ -562,8 +697,8 @@
 		22CEBEBB1E57DED400967943 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				22CEBF181E5821E400967943 /* XSYLoveBeenMineController.h */,
-				22CEBF191E5821E400967943 /* XSYLoveBeenMineController.m */,
+				2247F4331E6FE500007BB4A8 /* CommonController */,
+				2247F42F1E6FDD93007BB4A8 /* FirstPage */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -571,6 +706,7 @@
 		22CEBEBC1E57DED400967943 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2247F4341E6FE647007BB4A8 /* CommonControllerModel */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -578,6 +714,7 @@
 		22CEBEBD1E57DED400967943 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2247F4441E6FE689007BB4A8 /* CommonControllerCell */,
 				221E24191E6D6FF100B5FD40 /* tableViewHeaderView */,
 				221E24141E6D5E1500B5FD40 /* TopView */,
 			);
@@ -587,6 +724,7 @@
 		22CEBEBE1E57DED400967943 /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				2247F45C1E6FF289007BB4A8 /* Const */,
 			);
 			path = Libs;
 			sourceTree = "<group>";
@@ -676,10 +814,8 @@
 		22CEBEC81E57DED400967943 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				22CEBF211E583B1F00967943 /* XSYLoveBeenShopCarController.h */,
-				22CEBF221E583B1F00967943 /* XSYLoveBeenShopCarController.m */,
-				22ACCD291E5EF55600614CFC /* XSYLoveBeenShopingCarNavigationController.h */,
-				22ACCD2A1E5EF55600614CFC /* XSYLoveBeenShopingCarNavigationController.m */,
+				2247F42B1E6FDA3E007BB4A8 /* FirstPage */,
+				2247F4271E6FD988007BB4A8 /* NavigationController */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -878,6 +1014,7 @@
 				TargetAttributes = {
 					22CEBE991E57D7C200967943 = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = U33W6CG65X;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -970,11 +1107,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22ACCD2B1E5EF55600614CFC /* XSYLoveBeenShopingCarNavigationController.m in Sources */,
 				22CEBEA21E57D7C300967943 /* AppDelegate.m in Sources */,
 				22CEBF171E58216C00967943 /* XSYLoveBeenMarketController.m in Sources */,
 				221A9B0A1E5B16C500288F27 /* XSYLoveBeenMyButton.m in Sources */,
+				2247F4511E6FED32007BB4A8 /* XSYLoveBeenViewMinePageDetailController.m in Sources */,
 				22ACCD311E5F078500614CFC /* XSYLoveBeenShoppingCarOriginView.m in Sources */,
+				2247F42A1E6FDA38007BB4A8 /* XSYLoveBeenShopingCarNavigationController.m in Sources */,
 				22CEBE9F1E57D7C300967943 /* main.m in Sources */,
 				22320A1C1E5AD25A00D31713 /* XSYLoveBeenMapController.m in Sources */,
 				22CEBF031E580A5A00967943 /* NSString+CZHash.m in Sources */,
@@ -984,12 +1122,14 @@
 				22EA4E671E5D8F88009AF09B /* XSYLoveBeenMarketRightCell.m in Sources */,
 				22CEBF0D1E580A5A00967943 /* UILabel+Helper.m in Sources */,
 				22ACCD2D1E5EF61E00614CFC /* XSYLoveBeenNavigationController.m in Sources */,
-				22CEBF1A1E5821E400967943 /* XSYLoveBeenMineController.m in Sources */,
+				2247F4581E6FF1DB007BB4A8 /* UIImage+Extension.m in Sources */,
 				22CEBF001E580A5A00967943 /* NSAttributedString+CZAdditon.m in Sources */,
 				223209DC1E5843E500D31713 /* NetworkingTools.m in Sources */,
 				221A9B1C1E5C6AD000288F27 /* XSYLoveBeenProductsModel.m in Sources */,
 				223209ED1E5883A800D31713 /* XSYLoveBeenActivityAndIconModel.m in Sources */,
+				2247F4401E6FE66F007BB4A8 /* HQCommonItem.m in Sources */,
 				221A9B191E5C699800288F27 /* XSYLoveBeenCategoriesModel.m in Sources */,
+				2247F43F1E6FE66F007BB4A8 /* HQCommonGroup.m in Sources */,
 				22CEBF021E580A5A00967943 /* NSString+CZBase64.m in Sources */,
 				223209EA1E587B2300D31713 /* XSYLoveBeenFirstPageModel.m in Sources */,
 				22CEBF0B1E580A5A00967943 /* UIBarButtonItem+Extension.m in Sources */,
@@ -1000,27 +1140,35 @@
 				22CEBF011E580A5A00967943 /* NSObject+CZRuntime.m in Sources */,
 				223209F01E5883D100D31713 /* XSYLoveBeenFocusModel.m in Sources */,
 				223209FC1E58B16C00D31713 /* XSYLoveBeenFirstPageTableBottomCell.m in Sources */,
+				2247F45F1E6FF2B8007BB4A8 /* HQConst.m in Sources */,
 				22320A0B1E59BE9700D31713 /* XSYLoveBeenFirstPageWebViewController.m in Sources */,
 				22CEBF0C1E580A5A00967943 /* UIButton+Helper.m in Sources */,
 				22ACCD481E601BBB00614CFC /* XSYLoveBeenShoppingCarToolBar.m in Sources */,
 				22CEBEFF1E580A5A00967943 /* NSArray+Log.m in Sources */,
+				2247F4421E6FE66F007BB4A8 /* HQCommonItemLabelItem.m in Sources */,
+				2247F4471E6FE6AB007BB4A8 /* HQCommonCell.m in Sources */,
 				22320A181E5AC68700D31713 /* XSYLoveBeenDetailCell.m in Sources */,
 				221E24171E6D5E5000B5FD40 /* XSYLoveBeenMinePageTopView.m in Sources */,
 				22CEBED31E58099000967943 /* XSYLoveBeenIntroductionController.m in Sources */,
-				22CEBF231E583B1F00967943 /* XSYLoveBeenShopCarController.m in Sources */,
 				223209E31E5860E800D31713 /* XSYLoveBeenTableHeaderView.m in Sources */,
 				22CEBF0A1E580A5A00967943 /* UIViewController+CZAddition.m in Sources */,
 				22320A141E5AADDD00D31713 /* XSYLoveBeenFirstPageDetailController.m in Sources */,
 				223209DF1E58440200D31713 /* XSYLoveBeenNetworkingTools.m in Sources */,
+				2247F4631E6FF3D7007BB4A8 /* NSString+Extension.m in Sources */,
 				22320A0F1E59F8BC00D31713 /* XSYLoveBeenDetailPageHeaderView.m in Sources */,
+				2247F42E1E6FDA7F007BB4A8 /* XSYLoveBeenShopCarController.m in Sources */,
 				22320A061E59BDEC00D31713 /* XSYLoveBeenFirstController.m in Sources */,
 				22CEBF081E580A5A00967943 /* UIScreen+CZAddition.m in Sources */,
 				22CEBF091E580A5A00967943 /* UIView+CZAddition.m in Sources */,
 				22CEBF041E580A5A00967943 /* NSString+CZPath.m in Sources */,
 				22CEBF051E580A5A00967943 /* UIButton+CZAddition.m in Sources */,
 				22320A021E596FBB00D31713 /* XSYRefreshHeader.m in Sources */,
+				2247F44A1E6FEBD2007BB4A8 /* HQCommonViewController.m in Sources */,
 				221A9B0E1E5BFD9400288F27 /* XSYLoveBeenShoppingCarTools.m in Sources */,
+				2247F4321E6FDDD1007BB4A8 /* XSYLoveBeenMineController.m in Sources */,
+				2247F4431E6FE66F007BB4A8 /* HQCommonItemSwitchItem.m in Sources */,
 				22CEBF061E580A5A00967943 /* UIColor+CZAddition.m in Sources */,
+				2247F4411E6FE66F007BB4A8 /* HQCommonItemArrowItem.m in Sources */,
 				22CEBEDB1E5809F200967943 /* XSYLoveBeenTabbarController.m in Sources */,
 				221E241C1E6D705500B5FD40 /* XSYLoveBeenMinePageHeaderView.m in Sources */,
 			);
@@ -1123,7 +1271,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = U33W6CG65X;
 				GCC_PREFIX_HEADER = LoveBeen/PrefixHeader.pch;
 				INFOPLIST_FILE = "$(SRCROOT)/LoveBeen/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
@@ -1139,7 +1288,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = U33W6CG65X;
 				GCC_PREFIX_HEADER = LoveBeen/PrefixHeader.pch;
 				INFOPLIST_FILE = "$(SRCROOT)/LoveBeen/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;

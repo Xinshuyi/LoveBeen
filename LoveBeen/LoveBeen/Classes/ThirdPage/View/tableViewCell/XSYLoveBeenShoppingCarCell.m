@@ -20,6 +20,7 @@
 @end
 
 @implementation XSYLoveBeenShoppingCarCell
+
 - (IBAction)clickDecreaseButton:(UIButton *)sender {
     self.increaseButton.hidden = NO;
     self.shoppingModel.isIncreaseButtonHidden = NO;

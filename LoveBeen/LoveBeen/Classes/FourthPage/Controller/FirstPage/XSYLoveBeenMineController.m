@@ -11,6 +11,7 @@
 #import "XSYLoveBeenShopCarController.h"
 #import "XSYLoveBeenMinePageTopView.h"
 #import "XSYLoveBeenMinePageHeaderView.h"
+#import "XSYLoveBeenViewMinePageDetailController.h"
 #import <Masonry.h>
 
 static NSString *minePageCellID = @"minePageCellID";
@@ -31,7 +32,7 @@ static NSString *minePageCellID = @"minePageCellID";
     self.navigationController.delegate = self;
     
     [self.view addSubview:self.topView];
-    [self.view addSubview:self.tableView];
+    
     [self addConstraints];
 }
 
@@ -99,12 +100,11 @@ static NSString *minePageCellID = @"minePageCellID";
 
 - (UITableView *)tableView{
     if (_tableView == nil) {
-        _tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStyleGrouped];
-        _tableView.delegate = self;
-        _tableView.dataSource = self;
-        [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:minePageCellID];
-        // headerView
-        self.tableView.tableHeaderView = [[XSYLoveBeenMinePageHeaderView alloc] initWithFrame:CGRectMake(0, 0, 0, ScreenHeight * 0.1)];
+        XSYLoveBeenViewMinePageDetailController *vc = [[XSYLoveBeenViewMinePageDetailController alloc] init];
+        _tableView = vc.tableView;
+        [self addChildViewController:vc];
+        [self.view addSubview:vc.tableView];
+        [vc didMoveToParentViewController:self];
     }
     return _tableView;
 }
